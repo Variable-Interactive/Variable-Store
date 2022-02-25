@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Extensions/KeyDisplay/KeyDisplay.tscn" type="PackedScene" id=1]
+
+[node name="Main" type="Panel"]
+self_modulate = Color( 0.470588, 0.470588, 0.470588, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -757.0
+margin_bottom = -496.0
+rect_min_size = Vector2( 267, 104 )
+mouse_filter = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="KeyDisplay" parent="." instance=ExtResource( 1 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 4.0
+margin_right = -3.0
+margin_bottom = -4.0
