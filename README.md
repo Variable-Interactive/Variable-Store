@@ -4,6 +4,7 @@ The codes for each extension is stored in a folder of the same name inside the *
 
 ## Extensions Detail:
 The details for the extentions in the repo is as follows; <p>
+**Example:** A Template/Tutorial Extension<p>
 **KeyDisplay:** Handy extension to display shortcuts for use in videos
 
 ## Download Instructions:
