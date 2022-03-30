@@ -5,7 +5,8 @@ The codes for each extension is stored in a folder of the same name inside the *
 ## Extensions Detail:
 The details for the extentions in the repo is as follows; <p>
 **Example:** A Template/Tutorial Extension<p>
-**KeyDisplay:** Handy extension to display shortcuts for use in videos
+**KeyDisplay:** Handy extension to display shortcuts for use in videos<p>
+**zpix-font-ext:** A new Font for pixelorama from `https://github.com/SolidZORO/zpix-pixel-font`
 
 ## Download Instructions:
 

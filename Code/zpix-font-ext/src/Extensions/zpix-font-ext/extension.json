@@ -1,0 +1,11 @@
+{
+    "name": "zpix-font-ext",
+    "display_name": "zpix font for pixelorama",
+    "description": "A font for pixelorama",
+    "author": "Variable",
+    "version": "0.1",
+    "license": "MIT",
+    "nodes": [
+        "Main.tscn"
+    ]
+}
