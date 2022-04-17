@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Extensions/AverageColor/Graphics/Decoration.png" type="Texture" id=1]
+[ext_resource path="res://src/Extensions/AverageColor/Elements/Averager.gd" type="Script" id=2]
+
+[node name="Averager" type="VBoxContainer"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+size_flags_horizontal = 3
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 20.0
+
+[node name="Left" type="TextureRect" parent="HBoxContainer"]
+margin_right = 8.0
+size_flags_horizontal = 3
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 4
+flip_v = true
+
+[node name="Right" type="TextureRect" parent="HBoxContainer"]
+margin_left = 12.0
+margin_right = 20.0
+size_flags_horizontal = 3
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 4
+flip_h = true
+flip_v = true
+
+[node name="AverageColor" type="Button" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+hint_tooltip = "Average of the two colors"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="AverageColor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[connection signal="gui_input" from="AverageColor" to="." method="_on_AverageColor_gui_input"]
