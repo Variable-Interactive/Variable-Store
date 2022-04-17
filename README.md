@@ -5,7 +5,7 @@ The codes for each extension is stored in a folder of the same name inside the *
 ## Extensions Detail:
 The details for the extentions in the repo is as follows; <p>
 **Example:** A Template/Tutorial Extension<p>
-**AverageColor:** Sometimes you need to find average of 2 colors this extension does it for you!!<p>
+**AverageColor:** Sometimes you need to find average of 2 colors.., this extension does it for you!!<p>
 **KeyDisplay:** Handy extension to display shortcuts for use in videos<p>
 **zpix-font-ext:** A new Font for pixelorama from `https://github.com/SolidZORO/zpix-pixel-font`
 
