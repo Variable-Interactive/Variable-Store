@@ -2,17 +2,22 @@ extends Panel
 
 var moving = false
 var offset = Vector2.ZERO
+var global :Node  #Needed for reference to "Global" node of Pixelorama
 
 
 # This script acts as a setup for the extension
 #func _enter_tree() -> void:
-#	pass
-#
-#
+#	global = get_node("/root/Global")
+#	if global:
+#		pass
+
+
 #func _exit_tree() -> void:
-#	pass
+#	if global:
+#		pass
 
 
+# An example extension below (Remove it and make your own)
 func _ready() -> void:
 	set_global_position(OS.window_size/2.0 - rect_size/2.0)
 
