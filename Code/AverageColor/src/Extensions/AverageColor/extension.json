@@ -1,0 +1,11 @@
+{
+    "name": "AverageColor",
+    "display_name": "Display Color Average",
+    "description": "Displays the average color of left/right color slot",
+    "author": "Variable",
+    "version": "0.1",
+    "license": "MIT",
+    "nodes": [
+        "Main.tscn"
+    ]
+}
