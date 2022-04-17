@@ -1,9 +1,7 @@
 extends Panel
 
-var moving = false
-var offset = Vector2.ZERO
-var global :Node  #Needed for reference to "Global" node of Pixelorama
 
+#var global :Node  #Needed for reference to "Global" node of Pixelorama (Used most of the time)
 
 # This script acts as a setup for the extension
 #func _enter_tree() -> void:
@@ -18,6 +16,9 @@ var global :Node  #Needed for reference to "Global" node of Pixelorama
 
 
 # An example extension below (Remove it and make your own)
+var moving = false
+var offset = Vector2.ZERO
+
 func _ready() -> void:
 	set_global_position(OS.window_size/2.0 - rect_size/2.0)
 
