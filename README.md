@@ -1,5 +1,5 @@
 # Pixelorama Extensions Collection
-This contains some of the pixelorama extensions i made along with their code <p>
+This contains some of the [Pixelorama](https://orama-interactive.itch.io/pixelorama) extensions i made along with their code <p>
 The codes for each extension is stored in a folder of the same name inside the **Code** folder
 
 ## Extensions Detail:
