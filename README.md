@@ -19,7 +19,8 @@ The details for the extentions in the repo is as follows; <p>
 
 ### Code:
 
-To download code for extensions use https://minhaskamal.github.io/DownGit to download the folders
+For ease you can Directly download extension Template [HERE!](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Variable-ind/Pixelorama-Extensions/tree/master/Code/Example)<p>
+To download code for other extensions use https://minhaskamal.github.io/DownGit to download the folders.
 
 ### Extensions:
 
