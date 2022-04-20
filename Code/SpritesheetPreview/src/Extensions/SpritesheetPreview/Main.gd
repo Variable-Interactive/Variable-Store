@@ -222,19 +222,15 @@ func _input(event: InputEvent) -> void:
 		var mouse_pos = get_local_mouse_position()
 		if event is InputEventMouseMotion and !scaling:
 			if mouse_pos.distance_to(Vector2.ZERO) <= scale_limit: #Top left
-				print("Top left")
 				mouse_default_cursor_shape = Control.CURSOR_FDIAGSIZE
 				mode = Mode.T_LEFT
 			elif mouse_pos.distance_to(Vector2(rect_size.x, 0)) <= scale_limit: #Top right
-				print("Top right")
 				mouse_default_cursor_shape = Control.CURSOR_BDIAGSIZE
 				mode = Mode.T_RIGHT
 			elif mouse_pos.distance_to(Vector2(0,rect_size.y)) <= scale_limit: #Bottom left
-				print("Bottom left")
 				mouse_default_cursor_shape = Control.CURSOR_BDIAGSIZE
 				mode = Mode.B_LEFT
 			elif mouse_pos.distance_to(rect_size) <= scale_limit: #Bottom right
-				print("Bottom right")
 				mouse_default_cursor_shape = Control.CURSOR_FDIAGSIZE
 				mode = Mode.B_RIGHT
 			elif ((mouse_pos.x < scale_limit and mouse_pos.x > -scale_limit)
