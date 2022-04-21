@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Extensions/VariableStore/Store/Store.gd" type="Script" id=1]
+
+[node name="StoreButton" type="Button"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Variable Store"
+
+[node name="Store" type="WindowDialog" parent="."]
+margin_right = 428.0
+margin_bottom = 357.0
+rect_min_size = Vector2( 150, 150 )
+window_title = "Variable Store"
+resizable = true
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="Store"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = 8.0
+margin_right = -7.0
+margin_bottom = -8.0
+rect_clip_content = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Store/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -14.0
+margin_bottom = -16.0
+
+[node name="Content" type="VBoxContainer" parent="Store/Panel/ScrollContainer"]
+margin_right = 400.0
+size_flags_horizontal = 3
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Store"]
+
+[connection signal="pressed" from="." to="Store" method="_on_StoreButton_pressed"]
+[connection signal="about_to_show" from="Store" to="Store" method="_on_Store_about_to_show"]
+[connection signal="request_completed" from="Store/HTTPRequest" to="Store" method="_on_HTTPRequest_request_completed"]
