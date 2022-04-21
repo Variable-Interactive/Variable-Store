@@ -1,3 +1,4 @@
+0.1
 ["Name", "Information", "Image", "Download Link"]
 ["Example", "A Template/Tutorial Extension", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 ["AverageColor", "Sometimes you need to find average of 2 colors.. this extension does it for you!!", "https://user-images.githubusercontent.com/77773850/163723698-6879ff60-631e-4c4a-bbc1-1e3a8d36a3a0.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/AverageColor.pck"]
