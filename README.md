@@ -4,7 +4,13 @@ The codes for each extension is stored in a folder of the same name inside the *
 
 ## Extensions Detail:
 The details for the extentions in the repo is as follows; <p>
-**Example:** A Template/Tutorial Extension<p>
+**Example:** A Template/Tutorial Extension
+
+  ![Example](https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png)<p>
+
+**VariableStore:** A Store to download pixelorama extensions!!
+  
+  ![Store](https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png)<p>
 
 **AverageColor:** Sometimes you need to find average of 2 colors.., this extension does it for you!!
   
