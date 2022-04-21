@@ -3,35 +3,38 @@
 [ext_resource path="res://src/Extensions/Example/Main.gd" type="Script" id=1]
 
 [node name="Main" type="Panel"]
-margin_right = 378.0
-margin_bottom = 256.0
-rect_min_size = Vector2( 378, 256 )
+margin_right = 423.0
+margin_bottom = 357.0
+rect_min_size = Vector2( 150, 150 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 6.0
-margin_right = -6.0
-rect_min_size = Vector2( 366, 256 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -12.0
+margin_bottom = -12.0
 
-[node name="Title" type="Label" parent="VBoxContainer"]
-margin_right = 366.0
-margin_bottom = 14.0
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+margin_right = 399.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+
+[node name="Title" type="Label" parent="VBoxContainer/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 40 )
+mouse_filter = 0
 text = "Instructions"
 align = 1
 valign = 1
 
-[node name="Instructions" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 366.0
-margin_bottom = 256.0
+[node name="Content" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 44.0
+margin_right = 399.0
+margin_bottom = 333.0
 focus_mode = 2
 size_flags_vertical = 3
 text = "This is a simple example of how you can make an extension for pixelorama.
@@ -66,5 +69,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="gui_input" from="." to="." method="_on_Main_gui_input"]
-[connection signal="gui_input" from="VBoxContainer/Title" to="." method="_on_Title_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_Main_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Main_mouse_exited"]
+[connection signal="gui_input" from="VBoxContainer/ColorRect/Title" to="." method="_on_Title_gui_input"]
