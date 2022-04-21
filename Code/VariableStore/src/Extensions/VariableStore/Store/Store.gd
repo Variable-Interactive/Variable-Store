@@ -6,11 +6,13 @@ var extension_container :VBoxContainer
 var extension_path: String = ""
 
 #### Usage:
-### Change the "store_link" and "download_file" variables to your choice
+### Change the "store_version", "store_link" and "download_file" variables to your choice
 ### Don't touch anything else
 var download_file: String = "variable_info.txt" #File can be of any name you want
 var store_link: String = "https://raw.githubusercontent.com/Variable-ind/Pixelorama-Extensions/master/store_info.txt"
+var store_version: float = 0.1
 
+var new_version_available := false
 ### Principle/Setup:
 #  1) Make a file in the repository and store all the extensions inside it in
 #     the form of
@@ -42,7 +44,11 @@ func _on_StoreButton_pressed() -> void:
 
 
 func _on_Store_about_to_show() -> void:
-	#clear old entries
+	# Display Version
+	if !window_title.ends_with(str(" (", store_version, ")")):
+		window_title += str(" (", store_version, ")")
+
+	#Clear old entries
 	for entry in content.get_children():
 		entry.queue_free()
 
@@ -65,13 +71,27 @@ func _on_HTTPRequest_request_completed(result: int, _response_code: int, _header
 	if result == HTTPRequest.RESULT_SUCCESS:
 		var file = File.new()
 		var _error = file.open(str(extension_path,download_file), File.READ)
+		var version :float
 
-		var dummy_number = 0  # I don't need the first line of file
+		var dummy_number = 1
 		while not file.eof_reached():
 			var info = str2var(file.get_line())
-			if dummy_number > 0:
-				if typeof(info) == TYPE_ARRAY:
-					add_entry(info)
+			if typeof(info) == TYPE_REAL:
+				# check version
+				version = info
+				if version > store_version:
+					new_version_available = true
+			elif typeof(info) == TYPE_ARRAY:
+				if dummy_number >= 3:
+					if new_version_available:
+						if dummy_number == 3:
+							var label := Label.new()
+							label.text = str("Version ", version, " is Available")
+							content.add_child(label)
+							add_entry(info)  # Announce update
+					else:
+						if dummy_number > 3:  # The first 3 lines of file are Store-related and are excluded
+							add_entry(info)
 			dummy_number += 1
 		file.close()
 		var dir := Directory.new()
