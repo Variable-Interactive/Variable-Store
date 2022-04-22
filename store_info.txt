@@ -1,4 +1,4 @@
-0.1
+0.3
 # The Number above shows the Version of the store,
 # the info about extensions are stored in ["Name", "Information", "Image", "Download Link"] format
 
