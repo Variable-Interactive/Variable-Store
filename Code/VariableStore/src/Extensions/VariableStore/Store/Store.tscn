@@ -8,6 +8,7 @@ margin_bottom = 20.0
 text = "Variable Store"
 
 [node name="Store" type="WindowDialog" parent="."]
+visible = true
 margin_right = 428.0
 margin_bottom = 357.0
 rect_min_size = Vector2( 150, 150 )
@@ -30,14 +31,31 @@ __meta__ = {
 [node name="ScrollContainer" type="ScrollContainer" parent="Store/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -14.0
-margin_bottom = -16.0
+margin_left = 13.0
+margin_top = 8.0
+margin_right = -13.0
+margin_bottom = -8.0
 
 [node name="Content" type="VBoxContainer" parent="Store/Panel/ScrollContainer"]
-margin_right = 400.0
+margin_right = 388.0
 size_flags_horizontal = 3
 
 [node name="HTTPRequest" type="HTTPRequest" parent="Store"]
+
+[node name="Error" type="AcceptDialog" parent="Store"]
+margin_right = 319.0
+margin_bottom = 142.0
+
+[node name="Text" type="TextEdit" parent="Store/Error"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 311.0
+margin_bottom = 106.0
+text = "Unable to Get info from remote repository...
+	1) Check you internet connection 
+	2) Uninstall and redownload %s manually from the Github repository..."
+readonly = true
+wrap_enabled = true
 
 [connection signal="pressed" from="." to="Store" method="_on_StoreButton_pressed"]
 [connection signal="about_to_show" from="Store" to="Store" method="_on_Store_about_to_show"]
