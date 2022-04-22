@@ -1,4 +1,5 @@
 # Pixelorama Extensions Collection
+NOTE: For ease you can Directly download extension Template [HERE!](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Variable-ind/Pixelorama-Extensions/tree/master/Code/Example)<p>
 This contains some of the [Pixelorama](https://orama-interactive.itch.io/pixelorama) extensions i made along with their code <p>
 The codes for each extension is stored in a folder of the same name inside the **Code** folder
 
@@ -32,8 +33,7 @@ The details for the extentions in the repo is as follows; <p>
 
 ### Code:
 
-For ease you can Directly download extension Template [HERE!](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Variable-ind/Pixelorama-Extensions/tree/master/Code/Example)<p>
-To download code for other extensions use https://minhaskamal.github.io/DownGit to download the folders.
+To download code for extensions use https://minhaskamal.github.io/DownGit to download the folders.
 
 ### Extensions:
 
