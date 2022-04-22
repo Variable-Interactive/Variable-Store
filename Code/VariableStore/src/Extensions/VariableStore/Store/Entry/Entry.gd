@@ -7,22 +7,26 @@ extends Panel
 onready var ext_name = $Panel/HBoxContainer/VBoxContainer/Name
 onready var ext_discription = $Panel/HBoxContainer/VBoxContainer/Description
 onready var ext_picture = $Panel/HBoxContainer/Picture
+onready var down_button = $Panel/HBoxContainer/VBoxContainer/Download
 
 var extension_container :VBoxContainer
 var thumbnail := ""
 var download_link := ""
 var download_path := ""
+var is_update = false  # An update instead of download
 
 onready var download_request = $DownloadRequest
 
 func set_info(info: Array, extension_path: String) -> void:
-	ext_name.text = info[0]
-	ext_discription.text = info[1]
-	thumbnail = info[2]
-	download_link = info[3]
+	ext_name.text = str(info[0], "-v", info[1])  # Name with version
+	ext_discription.text = info[2]  # Description
+	thumbnail = info[-2]  # Image link
+	download_link = info[-1]  # Download link
+
 	var dir := Directory.new()
 	var _error = dir.make_dir_recursive(str(extension_path,"Download/"))
 	download_path = str(extension_path,"Download/",info[0],".pck")
+	set_if_updatable(info[0], info[1])
 
 	$RequestDelay.wait_time = randf() * 2 #to prevent sending bulk requests
 	$RequestDelay.start()
@@ -51,9 +55,21 @@ func _on_ImageRequest_request_completed(_result, _response_code, _headers, body:
 	ext_picture.texture = texture
 
 
-func _on_Button_pressed() -> void:
+func set_if_updatable(name: String, new_version: float):
+	for extension in extension_container.extensions.keys():
+		if extension_container.extensions[extension].file_name == name:
+			var old_version = str2var(extension_container.extensions[extension].version)
+			if typeof(old_version) == TYPE_REAL:
+				if new_version > old_version:
+					down_button.text = "Update"
+					is_update == true
+				elif new_version == old_version:
+					down_button.text = "Re-Download"
+
+
+func _on_Download_pressed() -> void:
 	# Download File
-	$Panel/HBoxContainer/VBoxContainer/Button.disabled = true
+	down_button.disabled = true
 	download_request.download_file = download_path
 	download_request.request(download_link)
 
@@ -62,17 +78,22 @@ func _on_DownloadRequest_request_completed(result: int, _response_code, _headers
 	if result == HTTPRequest.RESULT_SUCCESS:
 		# Add extension
 		extension_container.install_extension(download_path)
+		if is_update:
+			is_update = false
+			$Alert/Text.text = str("Update Complete!!\nRestart Pixelorama to take effect").c_unescape()
+			$Alert.popup_centered()
 		announce_done(true)
 	else:
-		$Error.dialog_text = str("Unable to Download extension...\nHttp Code (",result,")").c_unescape()
-		$Error.popup_centered()
+		$Alert/Text.text = str("Unable to Download extension...\nHttp Code (",result,")").c_unescape()
+		$Alert.popup_centered()
 		announce_done(false)
 	var dir := Directory.new()
 	var _error = dir.remove(download_path)
 
 
 func announce_done(success: bool):
-	$Panel/HBoxContainer/VBoxContainer/Button.disabled = false
+	down_button.disabled = false
+	down_button.text = "Re-Download"
 	if success:
 		$Panel/HBoxContainer/VBoxContainer/Done.visible = true
 	$DoneDelay.start()
@@ -80,5 +101,3 @@ func announce_done(success: bool):
 
 func _on_DoneDelay_timeout() -> void:
 	$Panel/HBoxContainer/VBoxContainer/Done.visible = false
-
-
