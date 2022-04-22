@@ -67,7 +67,7 @@ margin_bottom = 60.0
 text = "Done!!!"
 align = 1
 
-[node name="Button" type="Button" parent="Panel/HBoxContainer/VBoxContainer"]
+[node name="Download" type="Button" parent="Panel/HBoxContainer/VBoxContainer"]
 margin_top = 104.0
 margin_right = 283.0
 margin_bottom = 124.0
@@ -84,11 +84,11 @@ autostart = true
 [node name="DoneDelay" type="Timer" parent="."]
 wait_time = 2.0
 
-[node name="Error" type="AcceptDialog" parent="."]
+[node name="Alert" type="AcceptDialog" parent="."]
 margin_right = 242.0
 margin_bottom = 84.0
 
-[node name="Text" type="Label" parent="Error"]
+[node name="Text" type="Label" parent="Alert"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
@@ -98,7 +98,7 @@ margin_bottom = -36.0
 align = 1
 valign = 1
 
-[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Download" to="." method="_on_Download_pressed"]
 [connection signal="timeout" from="RequestDelay" to="." method="_on_RequestDelay_timeout"]
 [connection signal="request_completed" from="ImageRequest" to="." method="_on_ImageRequest_request_completed"]
 [connection signal="request_completed" from="DownloadRequest" to="." method="_on_DownloadRequest_request_completed"]
