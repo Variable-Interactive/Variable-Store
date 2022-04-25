@@ -3,7 +3,7 @@
     "display_name": "Anything you want",
     "description": "What the extension does",
     "author": "Your Name",
-    "version": "0.1",
+    "version": "0.2",
     "license": "MIT",
     "nodes": [
         "Main.tscn"
