@@ -25,6 +25,11 @@ The details for the extentions in the repo is as follows; <p>
   
   ![Spritesheet Preview](https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png)
 
+**UVHelperPack:** Set of tools to help you create UVmap. Inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE
+
+  ![Screenshot from 2022-07-05 20-39-44](https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png)
+
+
 **zpix-font-ext:** A new Font for pixelorama from `https://github.com/SolidZORO/zpix-pixel-font`
   
   ![font](https://user-images.githubusercontent.com/77773850/163723711-d7d8520e-56c7-4763-a9a6-1e9dcec5cde8.png)
