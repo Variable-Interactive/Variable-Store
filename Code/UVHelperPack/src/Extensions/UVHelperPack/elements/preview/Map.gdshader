@@ -1,0 +1,27 @@
+// Authored by Variable (6 May 2022)
+shader_type canvas_item;
+
+uniform sampler2D map_texture;  // The map texture
+uniform vec2 map_size = vec2(64, 64);  // The size of the map image
+// (i wanted to use textureSize() but its only supported for GLES3)
+
+// Useage:
+// Apply this shader to the base texture
+// the r and g values (0-255) of base image will be concidered as coordinates
+// Color from the "map_tex" will then be picked at the given coordinates
+// And displayed here
+void fragment(){
+    COLOR = vec4(0f);
+    vec4 col = texture(SCREEN_TEXTURE, SCREEN_UV);
+    vec2 lookup_uv = vec2(round(col.x * 255f)/(map_size.x - 0.1), round(col.y * 255f)/(map_size.y - 0.1));
+    vec4 tex = texture(map_texture, lookup_uv);
+    
+    if (col.a > 0f) {
+    COLOR = tex;
+    }
+	
+	if ((UV.x < 0.02f || UV.x > 0.98) || (UV.y < 0.03f || UV.y > 0.9)){
+		COLOR.rgb = vec3(0.0);
+		COLOR.a = 0.5;
+	}
+}

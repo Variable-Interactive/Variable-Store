@@ -1,0 +1,152 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Tools/BaseTool.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Extensions/UVHelperPack/elements/colorpicker/ColorPicker.gd" type="Script" id=2]
+
+[node name="ToolOptions" instance=ExtResource( 1 )]
+margin_bottom = 181.0
+script = ExtResource( 2 )
+
+[node name="ColorPicker" type="VBoxContainer" parent="." index="1"]
+margin_top = 18.0
+margin_right = 116.0
+margin_bottom = 245.0
+
+[node name="Label" type="Label" parent="ColorPicker" index="0"]
+margin_left = 32.0
+margin_right = 83.0
+margin_bottom = 14.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+text = "Pick for:"
+
+[node name="Options" type="OptionButton" parent="ColorPicker" index="1"]
+margin_left = 13.0
+margin_top = 18.0
+margin_right = 103.0
+margin_bottom = 38.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+text = "Left Color"
+items = [ "Left Color", null, false, 0, null, "Right Color", null, false, 1, null ]
+selected = 0
+
+[node name="Empty" type="Control" parent="ColorPicker" index="2"]
+margin_top = 42.0
+margin_right = 116.0
+margin_bottom = 42.0
+
+[node name="Mode" type="OptionButton" parent="ColorPicker" index="3"]
+margin_left = 12.0
+margin_top = 46.0
+margin_right = 104.0
+margin_bottom = 66.0
+hint_tooltip = "Picks actual Color from the Image"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+text = "Pick Color"
+items = [ "Pick Color", null, false, 0, null, "Pick Coordinate", null, false, 1, null ]
+selected = 0
+
+[node name="Sepaeator" type="HSeparator" parent="ColorPicker" index="4"]
+margin_top = 70.0
+margin_right = 116.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Label2" type="Label" parent="ColorPicker" index="5"]
+margin_top = 84.0
+margin_right = 116.0
+margin_bottom = 115.0
+size_flags_vertical = 2
+text = "Tweaks to
+Selected Color:"
+align = 1
+
+[node name="R" type="HBoxContainer" parent="ColorPicker" index="6"]
+margin_top = 119.0
+margin_right = 116.0
+margin_bottom = 143.0
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorPicker/R" index="0"]
+margin_left = 7.0
+margin_top = 5.0
+margin_right = 31.0
+margin_bottom = 19.0
+text = "R = "
+
+[node name="Tweak" type="SpinBox" parent="ColorPicker/R" index="1"]
+margin_left = 35.0
+margin_right = 109.0
+margin_bottom = 24.0
+max_value = 255.0
+value = 255.0
+
+[node name="G" type="HBoxContainer" parent="ColorPicker" index="7"]
+margin_top = 147.0
+margin_right = 116.0
+margin_bottom = 171.0
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorPicker/G" index="0"]
+margin_left = 6.0
+margin_top = 5.0
+margin_right = 32.0
+margin_bottom = 19.0
+text = "G = "
+
+[node name="Tweak" type="SpinBox" parent="ColorPicker/G" index="1"]
+margin_left = 36.0
+margin_right = 110.0
+margin_bottom = 24.0
+max_value = 255.0
+value = 255.0
+
+[node name="B" type="HBoxContainer" parent="ColorPicker" index="8"]
+margin_top = 175.0
+margin_right = 116.0
+margin_bottom = 199.0
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorPicker/B" index="0"]
+margin_left = 6.0
+margin_top = 5.0
+margin_right = 31.0
+margin_bottom = 19.0
+text = "B = "
+
+[node name="Tweak" type="SpinBox" parent="ColorPicker/B" index="1"]
+margin_left = 35.0
+margin_right = 109.0
+margin_bottom = 24.0
+max_value = 255.0
+value = 255.0
+
+[node name="A" type="HBoxContainer" parent="ColorPicker" index="9"]
+margin_top = 203.0
+margin_right = 116.0
+margin_bottom = 227.0
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorPicker/A" index="0"]
+margin_left = 6.0
+margin_top = 5.0
+margin_right = 31.0
+margin_bottom = 19.0
+text = "A = "
+
+[node name="Tweak" type="SpinBox" parent="ColorPicker/A" index="1"]
+margin_left = 35.0
+margin_right = 109.0
+margin_bottom = 24.0
+max_value = 255.0
+value = 255.0
+
+[connection signal="item_selected" from="ColorPicker/Options" to="." method="_on_Options_item_selected"]
+[connection signal="item_selected" from="ColorPicker/Mode" to="." method="_on_Mode_item_selected"]
+[connection signal="value_changed" from="ColorPicker/R/Tweak" to="." method="_on_Tweak_value_changed" binds= [ "R" ]]
+[connection signal="value_changed" from="ColorPicker/G/Tweak" to="." method="_on_Tweak_value_changed" binds= [ "G" ]]
+[connection signal="value_changed" from="ColorPicker/B/Tweak" to="." method="_on_Tweak_value_changed" binds= [ "B" ]]
+[connection signal="value_changed" from="ColorPicker/A/Tweak" to="." method="_on_Tweak_value_changed" binds= [ "A" ]]
+

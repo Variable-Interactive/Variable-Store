@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="Slot" type="Button"]
+margin_right = 22.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
