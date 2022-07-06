@@ -8,7 +8,7 @@
 
 ["KeyDisplay", 0.1, "Handy extension to display shortcuts for use in videos", "https://user-images.githubusercontent.com/77773850/163723707-698a74a1-b8d5-401c-bb70-74dc8b6f2e98.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
 
-["UVHelperPack", 0.1, "Lets you create UVmaps. inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE. Tutorial for this extension: (comming soon)", "https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/UVHelperPack.pck"]
+["UVHelperPack", 0.1, "Lets you create UVmaps. Inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE. Tutorial for this extension: (comming soon)", "https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/UVHelperPack.pck"]
 
 ["SpritesheetPreview", 0.1, "Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places", "https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/SpritesheetPreview.pck"]
 
