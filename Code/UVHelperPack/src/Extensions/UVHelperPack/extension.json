@@ -1,0 +1,11 @@
+{
+    "name": "UVHelperPack",
+    "display_name": "Helper tools for UV mapping",
+    "description": "Helper tools for UV mapping",
+    "author": "Variable",
+    "version": "0.1",
+    "license": "MIT",
+    "nodes": [
+        "Main.tscn"
+    ]
+}
