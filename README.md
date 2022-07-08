@@ -1,5 +1,6 @@
 # Pixelorama Extensions Collection
 ## Use the [VariableStore](https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck) extensions to download these extensions from within Pixelorama!!!
+###### The extensions "don't" have to be in this specific repo for them to appear in the "VariableStore" so if you want an extension added, let me know in **issues**.
 NOTE: For ease you can Directly download extension Template [HERE!](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Variable-ind/Pixelorama-Extensions/tree/master/Code/Example)<p>
 This contains some of the [Pixelorama](https://orama-interactive.itch.io/pixelorama) extensions i made along with their code <p>
 The codes for each extension is stored in a folder of the same name inside the **Code** folder
