@@ -22,14 +22,16 @@ The details for the extentions in the repo is as follows; <p>
   
   ![Key](https://user-images.githubusercontent.com/77773850/163723707-698a74a1-b8d5-401c-bb70-74dc8b6f2e98.png)<p>
 
+**PerspectiveEditor:** Lets you create Perspective lines Quickly and Easily
+  ![Screenshot from 2022-07-08 18-16-20](https://user-images.githubusercontent.com/77773850/178000309-33b7b857-2c2e-4c21-bfbd-527e143c3b79.png)<p>
+
 **SpritesheetPreview:** Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places
   
-  ![Spritesheet Preview](https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png)
+  ![Spritesheet Preview](https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png)<p>
 
 **UVHelperPack:** Set of tools to help you create UVmap. Inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE
 
-  ![Screenshot from 2022-07-05 20-39-44](https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png)
-
+  ![Screenshot from 2022-07-05 20-39-44](https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png)<p>
 
 **zpix-font-ext:** A new Font for pixelorama from `https://github.com/SolidZORO/zpix-pixel-font`
   
