@@ -1,0 +1,11 @@
+{
+    "name": "PerspectiveEditor",
+    "display_name": "An Editor to create and edit perspective lines",
+    "description": "",
+    "author": "Variable",
+    "version": "0.1",
+    "license": "MIT",
+    "nodes": [
+        "Main.tscn"
+    ]
+}
