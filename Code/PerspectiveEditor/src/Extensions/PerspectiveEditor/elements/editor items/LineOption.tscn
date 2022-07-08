@@ -1,0 +1,101 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Extensions/PerspectiveEditor/elements/editor items/LineOption.gd" type="Script" id=1]
+
+[node name="LineOption" type="VBoxContainer"]
+margin_right = 53.0
+margin_bottom = 20.0
+custom_constants/separation = 0
+script = ExtResource( 1 )
+
+[node name="Line" type="Button" parent="."]
+margin_right = 53.0
+margin_bottom = 20.0
+text = "Line 1"
+
+[node name="Control" type="Control" parent="."]
+margin_top = 20.0
+margin_right = 53.0
+margin_bottom = 20.0
+
+[node name="AcceptDialog" type="AcceptDialog" parent="Control"]
+visible = true
+margin_right = 361.0
+margin_bottom = 111.0
+window_title = "Properties"
+
+[node name="Control" type="VBoxContainer" parent="Control/AcceptDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -36.0
+
+[node name="Angle" type="HBoxContainer" parent="Control/AcceptDialog/Control"]
+margin_right = 345.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="Control/AcceptDialog/Control/Angle"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+text = "Angle :"
+align = 2
+valign = 1
+
+[node name="AngleSlider" type="HSlider" parent="Control/AcceptDialog/Control/Angle"]
+margin_left = 64.0
+margin_right = 267.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 360.0
+step = 0.001
+
+[node name="AngleBox" type="SpinBox" parent="Control/AcceptDialog/Control/Angle"]
+margin_left = 271.0
+margin_right = 345.0
+margin_bottom = 24.0
+max_value = 359.0
+step = 0.001
+align = 2
+suffix = "Degrees"
+
+[node name="Radius" type="HBoxContainer" parent="Control/AcceptDialog/Control"]
+margin_top = 28.0
+margin_right = 345.0
+margin_bottom = 52.0
+
+[node name="Label" type="Label" parent="Control/AcceptDialog/Control/Radius"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+text = "Radius :"
+align = 2
+valign = 1
+
+[node name="RadiusSlider" type="HSlider" parent="Control/AcceptDialog/Control/Radius"]
+margin_left = 64.0
+margin_right = 267.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 19999.0
+value = 19999.0
+allow_greater = true
+
+[node name="RadiusBox" type="SpinBox" parent="Control/AcceptDialog/Control/Radius"]
+margin_left = 271.0
+margin_right = 345.0
+margin_bottom = 24.0
+max_value = 19999.0
+value = 19999.0
+allow_greater = true
+align = 2
+suffix = "pixels"
+
+[connection signal="pressed" from="Line" to="." method="_on_Line_pressed"]
+[connection signal="popup_hide" from="Control/AcceptDialog" to="." method="_on_AcceptDialog_popup_hide"]
+[connection signal="value_changed" from="Control/AcceptDialog/Control/Angle/AngleSlider" to="." method="_on_AngleSlider_value_changed"]
+[connection signal="value_changed" from="Control/AcceptDialog/Control/Radius/RadiusSlider" to="." method="_on_RadiusSlider_value_changed"]
