@@ -29,7 +29,9 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		if track_mouse:
 			default_color.a = 0.5
-			var mouse_point = get_local_mouse_position()
+			var tmp_transform = get_canvas_transform().affine_inverse()
+			var tmp_position = global.main_viewport.get_local_mouse_position()
+			var mouse_point = tmp_transform.basis_xform(tmp_position) + tmp_transform.origin
 			var project_size = global.current_project.size
 			if Rect2(Vector2.ZERO, project_size).has_point(mouse_point):
 				Draw_Perspective_line()
