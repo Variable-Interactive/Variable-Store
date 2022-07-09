@@ -56,14 +56,14 @@ void fragment() {
 	
 	col = hsb2rgb(hsb);
 	
-	if ((UV.x < 0.02f || UV.x > 0.98) || (UV.y < 0.03f || UV.y > 0.9)){
+	if ((UV.x < 0.02 || UV.x > 0.98) || (UV.y < 0.03 || UV.y > 0.9)){
 		col.rgb = vec3(0.0);
 	}
 	
 	vec3 output = col;
 	COLOR = vec4(output.rgb, original_color.a);
 	
-	if ((UV.x < 0.02f || UV.x > 0.98) || (UV.y < 0.03f || UV.y > 0.9)){
+	if ((UV.x < 0.02 || UV.x > 0.98) || (UV.y < 0.03 || UV.y > 0.9)){
 		COLOR.a = 0.5;
 	}
 	

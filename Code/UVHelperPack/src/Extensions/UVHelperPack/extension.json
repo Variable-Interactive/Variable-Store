@@ -3,7 +3,7 @@
     "display_name": "Helper tools for UV mapping",
     "description": "Helper tools for UV mapping",
     "author": "Variable",
-    "version": "0.1",
+    "version": "0.2",
     "license": "MIT",
     "nodes": [
         "Main.tscn"
