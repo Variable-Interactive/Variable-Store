@@ -5,7 +5,19 @@ NOTE: For ease you can Directly download extension Template code from [HERE!](ht
 This contains some of the [Pixelorama](https://orama-interactive.itch.io/pixelorama) extensions i made along with their code <p>
 The codes for each extension is stored in a folder of the same name inside the **Code** folder
 
-## Extensions Detail:
+## Download Instructions:
+
+### Code:
+
+To download code for extensions use https://minhaskamal.github.io/DownGit to download the folders.
+
+### Extensions:
+
+To download extensions use the method below:
+
+https://user-images.githubusercontent.com/77773850/155725975-94756087-daf8-452c-a482-a37019244a52.mp4
+
+## Extensions and their Details:
 The details for the extentions in the repo is as follows; <p>
 **Example:** A Template/Tutorial Extension
 
@@ -37,15 +49,3 @@ The details for the extentions in the repo is as follows; <p>
 **zpix-font-ext:** A new Font for pixelorama from `https://github.com/SolidZORO/zpix-pixel-font`
   
   ![font](https://user-images.githubusercontent.com/77773850/163723711-d7d8520e-56c7-4763-a9a6-1e9dcec5cde8.png)
-
-## Download Instructions:
-
-### Code:
-
-To download code for extensions use https://minhaskamal.github.io/DownGit to download the folders.
-
-### Extensions:
-
-To download extensions use the method below:
-
-https://user-images.githubusercontent.com/77773850/155725975-94756087-daf8-452c-a482-a37019244a52.mp4
