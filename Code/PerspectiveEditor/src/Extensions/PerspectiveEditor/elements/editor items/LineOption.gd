@@ -4,7 +4,7 @@ var global :Node
 
 
 func _ready() -> void:
-	var global = get_node_or_null("/root/Global")
+	global = get_node_or_null("/root/Global")
 
 
 

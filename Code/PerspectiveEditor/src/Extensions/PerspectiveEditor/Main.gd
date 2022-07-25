@@ -15,7 +15,7 @@ func _enter_tree() -> void:
 		parent.call_deferred("add_child", editor_dialog)
 		editor_dialog.show()
 
-		axes = preload("res://src/Extensions/PerspectiveEditor/elements/editor items/Axes.tscn").instance()
+		axes = preload("res://src/Extensions/PerspectiveEditor/elements/canvas items/Axes.tscn").instance()
 		axes.get_child(0).global = global
 		axes.get_child(1).global = global
 		global.canvas.add_child(axes)

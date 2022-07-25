@@ -9,15 +9,15 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Line2D",
+"base": "Reference",
 "class": "PerspectiveLine",
 "language": "GDScript",
-"path": "res://src/Extensions/PerspectiveEditor/elements/editor items/PerspectiveLine.gd"
+"path": "res://src/Extensions/PerspectiveEditor/elements/canvas items/PerspectiveLine.gd"
 }, {
 "base": "Node",
 "class": "VanishingPoint",
 "language": "GDScript",
-"path": "res://src/Extensions/PerspectiveEditor/elements/editor items/VanishingPoint.gd"
+"path": "res://src/Extensions/PerspectiveEditor/elements/canvas items/VanishingPoint.gd"
 } ]
 _global_script_class_icons={
 "PerspectiveLine": "",

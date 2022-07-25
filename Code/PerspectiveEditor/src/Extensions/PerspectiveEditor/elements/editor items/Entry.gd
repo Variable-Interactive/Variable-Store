@@ -25,7 +25,7 @@ func create(_global):
 	if vanishing_point:
 		vanishing_point.queue_free()
 
-	vanishing_point = preload("res://src/Extensions/PerspectiveEditor/elements/editor items/VanishingPoint.tscn").instance()
+	vanishing_point = preload("res://src/Extensions/PerspectiveEditor/elements/canvas items/VanishingPoint.tscn").instance()
 	vanishing_point.main = main
 	vanishing_point.global = _global
 	update_line_data()

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Extensions/PerspectiveEditor/elements/canvas items/VanishingPoint.gd" type="Script" id=1]
+
+[node name="VanishingPoint" type="Node"]
+script = ExtResource( 1 )
