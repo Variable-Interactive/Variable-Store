@@ -1,0 +1,181 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Extensions/PerspectiveEditor/elements/editor items/Entry.gd" type="Script" id=1]
+[ext_resource path="res://src/Extensions/PerspectiveEditor/graphics/Delete.png" type="Texture" id=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	COLOR = color;
+	vec3 inverted = vec3(1.0) - color.rgb;
+	vec3 screen_color = textureLod(SCREEN_TEXTURE, SCREEN_UV, 0.0).rgb;
+	float screen_avg = (screen_color.r + screen_color.g + screen_color.b) / 3.0;
+	
+	COLOR.rgb = inverted * step(0.5, screen_avg) + color.rgb * step(screen_avg, 0.5);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="Entry" type="VBoxContainer" groups=["Entry"]]
+margin_right = 359.0
+margin_bottom = 121.0
+script = ExtResource( 1 )
+
+[node name="Title" type="ColorRect" parent="."]
+margin_right = 359.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Title"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Point: a"
+valign = 1
+clip_text = true
+
+[node name="PointInfo" type="HBoxContainer" parent="."]
+margin_top = 29.0
+margin_right = 359.0
+margin_bottom = 79.0
+
+[node name="Panel" type="Panel" parent="PointInfo"]
+self_modulate = Color( 1, 1, 1, 0.862745 )
+margin_right = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 105, 0 )
+
+[node name="Label" type="Label" parent="PointInfo/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 5
+text = "Vanishing Point:"
+align = 1
+valign = 1
+
+[node name="X" type="VBoxContainer" parent="PointInfo"]
+margin_left = 109.0
+margin_right = 183.0
+margin_bottom = 50.0
+
+[node name="Panel" type="Panel" parent="PointInfo/X"]
+margin_right = 74.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 0, 22 )
+
+[node name="Label" type="Label" parent="PointInfo/X/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "X"
+align = 1
+valign = 1
+
+[node name="XValue" type="SpinBox" parent="PointInfo/X"]
+margin_top = 26.0
+margin_right = 74.0
+margin_bottom = 50.0
+min_value = -19999.0
+max_value = 19999.0
+step = 0.5
+allow_greater = true
+allow_lesser = true
+
+[node name="Y" type="VBoxContainer" parent="PointInfo"]
+margin_left = 187.0
+margin_right = 261.0
+margin_bottom = 50.0
+
+[node name="Panel" type="Panel" parent="PointInfo/Y"]
+margin_right = 74.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 0, 22 )
+
+[node name="Label" type="Label" parent="PointInfo/Y/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Y"
+align = 1
+valign = 1
+
+[node name="YValue" type="SpinBox" parent="PointInfo/Y"]
+margin_top = 26.0
+margin_right = 74.0
+margin_bottom = 50.0
+min_value = -19999.0
+max_value = 19999.0
+step = 0.5
+allow_greater = true
+allow_lesser = true
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="PointInfo"]
+margin_left = 265.0
+margin_right = 315.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 0 )
+size_flags_horizontal = 3
+
+[node name="Delete" type="Button" parent="PointInfo"]
+margin_left = 319.0
+margin_right = 359.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 40, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="PointInfo/Delete"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 83.0
+margin_right = 359.0
+margin_bottom = 107.0
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0.862745 )
+margin_right = 105.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 105, 0 )
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Line Angles:"
+align = 1
+valign = 1
+
+[node name="Angles" type="ScrollContainer" parent="HBoxContainer"]
+margin_left = 109.0
+margin_right = 359.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+size_flags_horizontal = 3
+scroll_vertical_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Angles"]
+margin_right = 250.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AddLine" type="Button" parent="HBoxContainer/Angles/HBoxContainer"]
+margin_right = 20.0
+margin_bottom = 24.0
+text = "+"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+margin_top = 111.0
+margin_right = 359.0
+margin_bottom = 121.0
+custom_constants/separation = 10
+
+[connection signal="value_changed" from="PointInfo/X/XValue" to="." method="_on_XValue_value_changed"]
+[connection signal="value_changed" from="PointInfo/Y/YValue" to="." method="_on_YValue_value_changed"]
+[connection signal="pressed" from="PointInfo/Delete" to="." method="_on_Delete_pressed"]
+[connection signal="pressed" from="HBoxContainer/Angles/HBoxContainer/AddLine" to="." method="_on_AddLine_pressed"]
