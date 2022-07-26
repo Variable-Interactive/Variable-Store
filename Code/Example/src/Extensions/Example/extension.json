@@ -1,9 +1,9 @@
 {
     "name": "Example",
-    "display_name": "Anything you want",
+    "display_name": "Instructions to make an extension",
     "description": "What the extension does",
-    "author": "Your Name",
-    "version": "0.2",
+    "author": "Variable",
+    "version": "0.3",
     "license": "MIT",
     "nodes": [
         "Main.tscn"

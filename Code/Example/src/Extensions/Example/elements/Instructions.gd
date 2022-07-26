@@ -18,6 +18,10 @@ func _ready() -> void:
 func _on_Button_pressed() -> void:
 	OS.clipboard = $VBoxContainer/Content/VBoxContainer/HBoxContainer/Code.text
 
+
+func _on_Create_pressed() -> void:
+	$NewExtension.popup_centered()
+
 ###                                             ####
 ####################################################
 
@@ -137,3 +141,5 @@ func _input(event: InputEvent) -> void:
 				scale_right = false
 				scale_up = false
 				scale_down = false
+
+

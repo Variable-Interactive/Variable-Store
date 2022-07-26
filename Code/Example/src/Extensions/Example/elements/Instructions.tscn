@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Extensions/Example/elements/Instructions.gd" type="Script" id=1]
 [ext_resource path="res://src/Extensions/Example/elements/image assets/paths.png" type="Texture" id=2]
 [ext_resource path="res://src/Extensions/Example/elements/image assets/main.png" type="Texture" id=3]
 [ext_resource path="res://src/Extensions/Example/elements/image assets/special.png" type="Texture" id=4]
+[ext_resource path="res://src/Extensions/Example/elements/NewExtension.tscn" type="PackedScene" id=5]
 
 [node name="Instructions" type="Panel"]
 margin_right = 399.0
@@ -43,13 +44,29 @@ scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Content"]
 margin_right = 373.0
-margin_bottom = 1307.0
+margin_bottom = 1361.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Content/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Content/VBoxContainer"]
 margin_right = 373.0
-margin_bottom = 105.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+text = "Click here to skip all the reading and
+Create the extension directly ;)"
+align = 1
+valign = 1
+
+[node name="Create" type="Button" parent="VBoxContainer/Content/VBoxContainer/Label"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+clip_text = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Content/VBoxContainer"]
+margin_top = 54.0
+margin_right = 373.0
+margin_bottom = 159.0
 focus_mode = 2
 text = "This is a simple example of how you can make an extension for pixelorama.
 (We will be making an extension called \"Example\")
@@ -60,18 +77,18 @@ scroll_active = false
 selection_enabled = true
 
 [node name="path" type="TextureRect" parent="VBoxContainer/Content/VBoxContainer"]
-margin_top = 109.0
+margin_top = 163.0
 margin_right = 373.0
-margin_bottom = 259.0
+margin_bottom = 313.0
 rect_min_size = Vector2( 0, 150 )
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer/Content/VBoxContainer"]
-margin_top = 263.0
+margin_top = 317.0
 margin_right = 373.0
-margin_bottom = 293.0
+margin_bottom = 347.0
 focus_mode = 2
 text = "The \"extension.json\" file should contain the code like the one below (the code can be selected and copied):"
 fit_content_height = true
@@ -79,9 +96,9 @@ scroll_active = false
 selection_enabled = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Content/VBoxContainer"]
-margin_top = 297.0
+margin_top = 351.0
 margin_right = 373.0
-margin_bottom = 462.0
+margin_bottom = 516.0
 
 [node name="Code" type="RichTextLabel" parent="VBoxContainer/Content/VBoxContainer/HBoxContainer"]
 margin_right = 326.0
@@ -107,9 +124,9 @@ margin_bottom = 165.0
 text = "Copy"
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer/Content/VBoxContainer"]
-margin_top = 466.0
+margin_top = 520.0
 margin_right = 373.0
-margin_bottom = 586.0
+margin_bottom = 640.0
 focus_mode = 2
 text = "
 EXPLANATION:
@@ -119,18 +136,18 @@ scroll_active = false
 selection_enabled = true
 
 [node name="Main_gd" type="TextureRect" parent="VBoxContainer/Content/VBoxContainer"]
-margin_top = 590.0
+margin_top = 644.0
 margin_right = 373.0
-margin_bottom = 890.0
+margin_bottom = 944.0
 rect_min_size = Vector2( 0, 300 )
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 1
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="VBoxContainer/Content/VBoxContainer"]
-margin_top = 894.0
+margin_top = 948.0
 margin_right = 373.0
-margin_bottom = 1029.0
+margin_bottom = 1083.0
 focus_mode = 2
 text = "
 EXPORT:
@@ -142,18 +159,18 @@ scroll_active = false
 selection_enabled = true
 
 [node name="include" type="TextureRect" parent="VBoxContainer/Content/VBoxContainer"]
-margin_top = 1033.0
+margin_top = 1087.0
 margin_right = 373.0
-margin_bottom = 1183.0
+margin_bottom = 1237.0
 rect_min_size = Vector2( 0, 150 )
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
 [node name="RichTextLabel6" type="RichTextLabel" parent="VBoxContainer/Content/VBoxContainer"]
-margin_top = 1187.0
+margin_top = 1241.0
 margin_right = 373.0
-margin_bottom = 1307.0
+margin_bottom = 1361.0
 focus_mode = 2
 text = "
 3) Now select \"Export PCK/Zip\" and export the extension with either \".zip\" or \".pck\". The export must also be of the same name as the extension (Example.pck or Example.zip in this case)
@@ -166,8 +183,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="NewExtension" parent="." instance=ExtResource( 5 )]
+visible = false
+
 [connection signal="mouse_entered" from="." to="." method="_on_Main_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Main_mouse_exited"]
 [connection signal="visibility_changed" from="." to="." method="_on_Instructions_visibility_changed"]
 [connection signal="gui_input" from="VBoxContainer/ColorRect/Title" to="." method="_on_Title_gui_input"]
+[connection signal="pressed" from="VBoxContainer/Content/VBoxContainer/Label/Create" to="." method="_on_Create_pressed"]
 [connection signal="pressed" from="VBoxContainer/Content/VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
