@@ -1,11 +1,10 @@
-extends VBoxContainer
-
-var moving := false
-var offset := Vector2.ZERO
+extends WindowDialog
 
 
 func _ready() -> void:
-	get_parent().set_global_position(OS.window_size/2.0 - rect_size/2.0)
+	get_close_button().visible = false
+	set_global_position(OS.window_size/2.0 - rect_size/2.0)
+	show()
 
 
 func _input(event: InputEvent) -> void:
@@ -41,16 +40,3 @@ func _input(event: InputEvent) -> void:
 
 func _exit_tree() -> void:
 	queue_free()
-
-
-func _on_Title_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.pressed:
-			moving = true
-			offset = $Title.get_local_mouse_position()
-		else:
-			moving = false
-
-	if event is InputEventMouseMotion:
-		if moving:
-			get_parent().set_global_position(get_global_mouse_position() - offset)

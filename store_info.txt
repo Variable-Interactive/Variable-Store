@@ -2,16 +2,16 @@
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", "Image", "Download Link"] format
 ["VariableStore", "A Store to download pixelorama extensions!! (Restart Pixelorama after update)", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
-["Example", 0.3, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
+["Example", 0.4, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 
 ["AverageColor", 0.1, "Sometimes you need to find average of 2 colors.. this extension does it for you!!", "https://user-images.githubusercontent.com/77773850/163723698-6879ff60-631e-4c4a-bbc1-1e3a8d36a3a0.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/AverageColor.pck"]
 
-["KeyDisplay", 0.1, "Handy extension to display shortcuts for use in videos", "https://user-images.githubusercontent.com/77773850/163723707-698a74a1-b8d5-401c-bb70-74dc8b6f2e98.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
+["KeyDisplay", 0.2, "Handy extension to display shortcuts for use in videos", "https://user-images.githubusercontent.com/77773850/163723707-698a74a1-b8d5-401c-bb70-74dc8b6f2e98.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
 
-["PerspectiveEditor", 0.3, "This extension will let you create Perspective lines Quickly and Easily!!!", "https://user-images.githubusercontent.com/77773850/178000309-33b7b857-2c2e-4c21-bfbd-527e143c3b79.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/PerspectiveEditor.pck"]
+["PerspectiveEditor", 0.4, "This extension will let you create Perspective lines Quickly and Easily!!!", "https://user-images.githubusercontent.com/77773850/178000309-33b7b857-2c2e-4c21-bfbd-527e143c3b79.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/PerspectiveEditor.pck"]
 
 ["UVHelperPack", 0.2, "(Minimum version required: 0.10.2-dev) Lets you create UVmaps. Inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE. Tutorial for this extension: (comming soon)", "https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/UVHelperPack.pck"]
 
-["SpritesheetPreview", 0.1, "Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places", "https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/SpritesheetPreview.pck"]
+["SpritesheetPreview", 0.2, "Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places", "https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/SpritesheetPreview.pck"]
 
 #["zpix-font-ext", 0.1, "A new Font for pixelorama from (https://github.com/SolidZORO/zpix-pixel-font)", "https://user-images.githubusercontent.com/77773850/163723711-d7d8520e-56c7-4763-a9a6-1e9dcec5cde8.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/zpix-font-ext.pck"]

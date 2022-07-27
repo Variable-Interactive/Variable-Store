@@ -3,7 +3,7 @@
     "display_name": "Key Display",
     "description": "a simple key Display for Tutorials",
     "author": "Variable",
-    "version": "0.1",
+    "version": "0.2",
     "license": "MIT",
     "nodes": [
         "Main.tscn"

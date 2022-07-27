@@ -3,7 +3,7 @@
     "display_name": "Spritesheet Preview",
     "description": "A spritesheet preview of all frames",
     "author": "Variable",
-    "version": "0.1",
+    "version": "0.2",
     "license": "MIT",
     "nodes": [
         "Main.tscn"

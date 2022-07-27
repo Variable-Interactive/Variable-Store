@@ -1,4 +1,4 @@
-extends Panel
+extends WindowDialog
 
 enum Orientation { ROWS = 0, COLUMNS = 1 }
 
@@ -23,6 +23,25 @@ func _enter_tree() -> void:
 func _ready() -> void:
 	$RefreshTimer.start()
 	set_global_position(OS.window_size/2.0 - rect_size/2.0)
+	get_close_button().visible = false
+	show()
+
+
+func _input(event: InputEvent) -> void:
+	if (event is InputEventKey
+	or event is InputEventMouseButton):
+		if !event.pressed:
+			$RefreshTimer.start()
+
+	if event is InputEventMouse:
+		var mouse_pos = get_local_mouse_position()
+		# Avoid canvas interaction if hovering above dialog
+		if global:
+			if Rect2(Vector2.ZERO, rect_size).has_point(mouse_pos):
+				global.can_draw = false
+			else:
+				if global.has_focus:
+					global.can_draw = true
 
 
 func _on_RefreshTimer_timeout() -> void:
@@ -174,129 +193,3 @@ func _on_Orientation_item_selected(id: int) -> void:
 func _on_LinesCount_value_changed(value: int) -> void:
 	lines_count = value
 	set_preview()
-
-
-#### Dialog Movement
-var moving = false
-var scaling = false
-var can_scale = false
-var mode = 0
-enum Mode { NONE, LEFT, RIGHT, UP, DOWN, T_LEFT, T_RIGHT, B_LEFT, B_RIGHT }
-var scale_limit = 5
-var offset = Vector2.ZERO
-
-
-func _on_Main_mouse_entered() -> void:
-	if global:
-		global.can_draw = false
-	can_scale = true
-
-
-func _on_Main_mouse_exited() -> void:
-	if global:
-		global.can_draw = true
-	if !scaling:
-		can_scale = false
-
-
-func _on_Title_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.pressed:
-			moving = true
-			offset = get_local_mouse_position()
-		else:
-			moving = false
-
-	if event is InputEventMouseMotion:
-		if moving:
-			set_global_position(get_global_mouse_position() - offset)
-
-
-func _input(event: InputEvent) -> void:
-	if (event is InputEventKey
-	or event is InputEventMouseButton):
-		if !event.pressed:
-			$RefreshTimer.start()
-
-	if event is InputEventMouse:  # Set cursor and mode accordingly
-		var mouse_pos = get_local_mouse_position()
-		if event is InputEventMouseMotion and !scaling:
-			if mouse_pos.distance_to(Vector2.ZERO) <= scale_limit: #Top left
-				mouse_default_cursor_shape = Control.CURSOR_FDIAGSIZE
-				mode = Mode.T_LEFT
-			elif mouse_pos.distance_to(Vector2(rect_size.x, 0)) <= scale_limit: #Top right
-				mouse_default_cursor_shape = Control.CURSOR_BDIAGSIZE
-				mode = Mode.T_RIGHT
-			elif mouse_pos.distance_to(Vector2(0,rect_size.y)) <= scale_limit: #Bottom left
-				mouse_default_cursor_shape = Control.CURSOR_BDIAGSIZE
-				mode = Mode.B_LEFT
-			elif mouse_pos.distance_to(rect_size) <= scale_limit: #Bottom right
-				mouse_default_cursor_shape = Control.CURSOR_FDIAGSIZE
-				mode = Mode.B_RIGHT
-			elif ((mouse_pos.x < scale_limit and mouse_pos.x > -scale_limit)
-			and (mouse_pos.y > 0 and mouse_pos.y < rect_size.y)): #Left
-				mouse_default_cursor_shape = Control.CURSOR_HSIZE
-				mode = Mode.LEFT
-			elif (mouse_pos.x >= rect_size.x - scale_limit and mouse_pos.x <= rect_size.x + scale_limit
-			and (mouse_pos.y > 0 and mouse_pos.y < rect_size.y)): #Right
-				mouse_default_cursor_shape = Control.CURSOR_HSIZE
-				mode = Mode.RIGHT
-			elif ((mouse_pos.y < scale_limit and mouse_pos.y > -scale_limit)
-			and (mouse_pos.x > 0 and mouse_pos.x < rect_size.x)): #Up
-				mouse_default_cursor_shape = Control.CURSOR_VSIZE
-				mode = Mode.UP
-			elif (mouse_pos.y >= rect_size.y - scale_limit and mouse_pos.y <= rect_size.y + scale_limit
-			and (mouse_pos.x > 0 and mouse_pos.x < rect_size.x)): #Down
-				mouse_default_cursor_shape = Control.CURSOR_VSIZE
-				mode = Mode.DOWN
-			else:
-				if event is InputEventMouseMotion:
-					mouse_default_cursor_shape = Control.CURSOR_ARROW
-					mode = Mode.NONE
-
-		elif event is InputEventMouseMotion and scaling:  # Here's where the scaling is done
-			if can_scale:
-				match mode:
-					# SIDES
-					Mode.RIGHT:
-						rect_size.x += get_global_mouse_position().x - rect_global_position.x - (rect_size.x)
-					Mode.LEFT:
-						if rect_size.x + (rect_global_position.x - get_global_mouse_position().x) > rect_min_size.x:
-							rect_size.x += rect_global_position.x - get_global_mouse_position().x
-							rect_position.x -= (rect_global_position.x) - get_global_mouse_position().x
-					Mode.DOWN:
-						rect_size.y += get_global_mouse_position().y - rect_global_position.y - (rect_size.y)
-					Mode.UP:
-						if rect_size.y + (rect_global_position.y - get_global_mouse_position().y) > rect_min_size.y:
-							rect_size.y += rect_global_position.y - get_global_mouse_position().y
-							rect_position.y -= (rect_global_position.y) - get_global_mouse_position().y
-
-					#CORNERS
-					Mode.T_LEFT:
-						if rect_size.y + (rect_global_position.y - get_global_mouse_position().y) > rect_min_size.y:
-							rect_size.y += rect_global_position.y - get_global_mouse_position().y
-							rect_position.y -= (rect_global_position.y) - get_global_mouse_position().y
-						if rect_size.x + (rect_global_position.x - get_global_mouse_position().x) > rect_min_size.x:
-							rect_size.x += rect_global_position.x - get_global_mouse_position().x
-							rect_position.x -= (rect_global_position.x) - get_global_mouse_position().x
-					Mode.T_RIGHT:
-						if rect_size.y + (rect_global_position.y - get_global_mouse_position().y) > rect_min_size.y:
-							rect_size.y += rect_global_position.y - get_global_mouse_position().y
-							rect_position.y -= (rect_global_position.y) - get_global_mouse_position().y
-						rect_size.x += get_global_mouse_position().x - rect_global_position.x - (rect_size.x)
-					Mode.B_LEFT:
-						rect_size.y += get_global_mouse_position().y - rect_global_position.y - (rect_size.y)
-						if rect_size.x + (rect_global_position.x - get_global_mouse_position().x) > rect_min_size.x:
-							rect_size.x += rect_global_position.x - get_global_mouse_position().x
-							rect_position.x -= (rect_global_position.x) - get_global_mouse_position().x
-					Mode.B_RIGHT:
-						rect_size.y += get_global_mouse_position().y - rect_global_position.y - (rect_size.y)
-						rect_size.x += get_global_mouse_position().x - rect_global_position.x - (rect_size.x)
-
-		if event is InputEventMouseButton:
-			if event.pressed:
-				scaling = true
-			else:
-				scaling = false
-				can_scale = false
-				mode = Mode.NONE
