@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
+"base": "Line2D",
 "class": "PerspectiveLine",
 "language": "GDScript",
 "path": "res://src/Extensions/PerspectiveEditor/elements/canvas items/PerspectiveLine.gd"

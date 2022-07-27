@@ -1,7 +1,7 @@
 extends Node
 
 var global :Node  # Needed for reference to "Global" node of Pixelorama (Used most of the time)
-var editor_dialog  # Its a kind of "Custom Dialog" i designed myself
+var editor_dialog :WindowDialog
 
 var axes :Node2D
 
@@ -13,7 +13,6 @@ func _enter_tree() -> void:
 		editor_dialog = preload("res://src/Extensions/PerspectiveEditor/elements/Editor.tscn").instance()
 		editor_dialog.main = self
 		parent.call_deferred("add_child", editor_dialog)
-		editor_dialog.show()
 
 		axes = preload("res://src/Extensions/PerspectiveEditor/elements/canvas items/Axes.tscn").instance()
 		axes.get_child(0).global = global

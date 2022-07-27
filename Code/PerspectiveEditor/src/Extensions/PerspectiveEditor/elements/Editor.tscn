@@ -2,11 +2,12 @@
 
 [ext_resource path="res://src/Extensions/PerspectiveEditor/elements/Editor.gd" type="Script" id=1]
 
-[node name="Editor" type="Panel"]
+[node name="Editor" type="WindowDialog"]
 self_modulate = Color( 1, 1, 1, 0.537255 )
-margin_right = 374.0
+margin_right = 375.0
 margin_bottom = 281.0
 rect_min_size = Vector2( 375, 150 )
+window_title = "Prespective Editor"
 script = ExtResource( 1 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -17,32 +18,15 @@ margin_top = 11.0
 margin_right = -7.0
 margin_bottom = -11.0
 
-[node name="ColorRect" type="Panel" parent="VBoxContainer"]
-self_modulate = Color( 0.415686, 0.415686, 0.415686, 0.784314 )
+[node name="Visibility" type="Button" parent="VBoxContainer"]
 margin_right = 361.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 0, 40 )
-
-[node name="Title" type="Label" parent="VBoxContainer/ColorRect"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_min_size = Vector2( 0, 40 )
-mouse_filter = 0
-text = "Prespective Editor"
-align = 1
-valign = 1
-
-[node name="Visibility" type="Button" parent="VBoxContainer/ColorRect"]
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -71.0
+margin_bottom = 20.0
 toggle_mode = true
 text = "Minimize"
 
 [node name="Panel" type="Panel" parent="VBoxContainer"]
 self_modulate = Color( 0.698039, 0.698039, 0.698039, 0.698039 )
-margin_top = 44.0
+margin_top = 24.0
 margin_right = 361.0
 margin_bottom = 259.0
 rect_clip_content = true
@@ -58,7 +42,7 @@ size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel/Content"]
 margin_right = 361.0
-margin_bottom = 215.0
+margin_bottom = 235.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 5
@@ -81,11 +65,7 @@ margin_right = 361.0
 margin_bottom = 20.0
 text = "+"
 
-[connection signal="mouse_entered" from="." to="." method="_on_Main_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_Main_mouse_exited"]
-[connection signal="visibility_changed" from="." to="." method="_on_Instructions_visibility_changed"]
-[connection signal="gui_input" from="VBoxContainer/ColorRect/Title" to="." method="_on_Title_gui_input"]
-[connection signal="mouse_entered" from="VBoxContainer/ColorRect/Visibility" to="." method="_on_Visibility_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/ColorRect/Visibility" to="." method="_on_Visibility_mouse_exited"]
-[connection signal="toggled" from="VBoxContainer/ColorRect/Visibility" to="." method="_on_Visibility_toggled"]
+[connection signal="mouse_entered" from="VBoxContainer/Visibility" to="." method="_on_Visibility_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Visibility" to="." method="_on_Visibility_mouse_exited"]
+[connection signal="toggled" from="VBoxContainer/Visibility" to="." method="_on_Visibility_toggled"]
 [connection signal="pressed" from="VBoxContainer/Panel/Content/VBoxContainer/HBoxContainer/AddPoint" to="." method="_on_AddPoint_pressed"]
