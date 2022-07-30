@@ -10,7 +10,7 @@
 
 ["PerspectiveEditor", 0.4, "This extension will let you create Perspective lines Quickly and Easily!!!", "https://user-images.githubusercontent.com/77773850/178000309-33b7b857-2c2e-4c21-bfbd-527e143c3b79.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/PerspectiveEditor.pck"]
 
-["Recorder", 0.1, "(Minimum version required: 0.10.2-dev) This extension will let you save a snapshot at every undo/redo event to be combined later as a video in a video editor", "https://user-images.githubusercontent.com/77773850/181867485-11f85783-cd08-446b-a960-e078053d7fc0.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Recorder.pck"]
+["Recorder", 0.2, "(Minimum version required: 0.10.2-dev) This extension will let you save a snapshot at every undo/redo event to be combined later as a video in a video editor", "https://user-images.githubusercontent.com/77773850/181867485-11f85783-cd08-446b-a960-e078053d7fc0.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Recorder.pck"]
 
 ["UVHelperPack", 0.2, "(Minimum version required: 0.10.2-dev) Lets you create UVmaps. Inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE. Tutorial for this extension: (comming soon)", "https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/UVHelperPack.pck"]
 
