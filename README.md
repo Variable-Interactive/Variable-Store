@@ -36,6 +36,9 @@ The details for the extentions in the repo is as follows; <p>
 
 **PerspectiveEditor:** Lets you create Perspective lines Quickly and Easily
   ![Screenshot from 2022-07-08 18-16-20](https://user-images.githubusercontent.com/77773850/178000309-33b7b857-2c2e-4c21-bfbd-527e143c3b79.png)<p>
+  
+**Recorder:** Lets you save a snapshot at every undo/redo event to be combined later as a video
+  ![recorder](https://user-images.githubusercontent.com/77773850/181867485-11f85783-cd08-446b-a960-e078053d7fc0.png)<p>
 
 **SpritesheetPreview:** Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places
   

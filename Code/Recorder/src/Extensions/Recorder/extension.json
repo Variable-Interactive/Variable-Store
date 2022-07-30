@@ -1,0 +1,9 @@
+{
+"author": "Variable",
+"description": "Records the progress at each undo or redo and saves as image to be combined later",
+"display_name": "Progress Recorder",
+"license": "MIT",
+"name": "Recorder",
+"nodes": [ "Main.tscn" ],
+"version": "0.1"
+}
