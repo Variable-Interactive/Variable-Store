@@ -4,8 +4,8 @@
 
 [node name="Recorder" type="WindowDialog"]
 margin_right = 350.0
-margin_bottom = 210.0
-rect_min_size = Vector2( 350, 210 )
+margin_bottom = 259.0
+rect_min_size = Vector2( 350, 260 )
 window_title = "Recorder"
 script = ExtResource( 1 )
 __meta__ = {
@@ -137,16 +137,40 @@ margin_bottom = 15.0
 size_flags_horizontal = 3
 text = "Record Pixelorama?"
 
-[node name="Spacer2" type="Control" parent="VBoxContainer"]
+[node name="Spacer4" type="Control" parent="VBoxContainer"]
 margin_top = 134.0
 margin_right = 350.0
-margin_bottom = 166.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="SkipActions" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 148.0
+margin_right = 350.0
+margin_bottom = 172.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/SkipActions"]
+margin_left = 43.0
+margin_top = 5.0
+margin_right = 228.0
+margin_bottom = 19.0
+text = "Capture frame after actions : "
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/SkipActions"]
+margin_left = 232.0
+margin_right = 306.0
+margin_bottom = 24.0
+
+[node name="Spacer2" type="Control" parent="VBoxContainer"]
+margin_top = 176.0
+margin_right = 350.0
+margin_bottom = 216.0
 size_flags_vertical = 3
 
 [node name="Destination" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 170.0
+margin_top = 220.0
 margin_right = 350.0
-margin_bottom = 210.0
+margin_bottom = 260.0
 rect_min_size = Vector2( 0, 40 )
 
 [node name="Path" type="LineEdit" parent="VBoxContainer/Destination"]
@@ -181,6 +205,7 @@ current_path = "/home/variable/Documents/Godot/Godot projects/Recorder/"
 [connection signal="item_selected" from="VBoxContainer/TargetProject/TargetProjectOption" to="." method="_on_TargetProjectOption_item_selected"]
 [connection signal="pressed" from="VBoxContainer/TargetProject/TargetProjectOption" to="." method="_on_TargetProjectOption_pressed"]
 [connection signal="value_changed" from="VBoxContainer/ScrollContainer/RecordScreen/Mode" to="." method="_on_Mode_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/SkipActions/SpinBox" to="." method="_on_SpinBox_value_changed"]
 [connection signal="pressed" from="VBoxContainer/Destination/Choose" to="." method="_on_Choose_pressed"]
 [connection signal="dir_selected" from="Path" to="." method="_on_Path_dir_selected"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -11,10 +11,14 @@ var extension_api :Node  # Needed for reference to "Global" node of Pixelorama (
 var project
 
 var cache :Array = []
+var current_frame_no = -1
 
 var mode = 0
+var chosen_dir = ""
 var save_dir = ""
 var frame_captured = 0
+var skip_amount = 0
+
 
 signal frame_saved
 
@@ -30,17 +34,36 @@ func initialize_recording():
 	connect_undo()
 	cache.clear()
 	frame_captured = 0
+	current_frame_no = skip_amount - 1
 	start_button.text = "Stop Recording"
 	for child in $VBoxContainer.get_children():
 		if !child.is_in_group("visible during recording"):
 			child.visible = false
 	rect_min_size = Vector2(235, 101)
 	rect_size = rect_min_size
+
+	save_dir = chosen_dir
+	# Create a new directory based on time
+	if save_dir.ends_with("/"):
+		save_dir[-1] = ""
+	var folder = str(project.name,
+				 OS.get_time().hour,
+				 "_", OS.get_time().minute,
+				 "_", OS.get_time().second)
+	save_dir = str(save_dir , "/", folder)
+	var dir := Directory.new()
+# warning-ignore:return_value_discarded
+	dir.make_dir_recursive(save_dir)
+
 	capture_frame() # capture first frame
 	$Timer.start()
 
 
 func capture_frame() -> void:
+	current_frame_no += 1
+	if current_frame_no != skip_amount:
+		return
+	current_frame_no = -1
 	var image := Image.new()
 	if mode == Mode.PIXELORAMA:
 		image = get_tree().root.get_viewport().get_texture().get_data()
@@ -70,7 +93,7 @@ func finalize_recording():
 	cache.clear()
 	disconnect_undo()
 	start_button.text = "Start Recording"
-	rect_min_size = Vector2(400, 270)
+	rect_min_size = Vector2(400, 260)
 	for child in $VBoxContainer.get_children():
 		child.visible = true
 
@@ -88,10 +111,6 @@ func connect_undo() -> void:
 	project.undo_redo.connect("version_changed", self, "capture_frame")
 
 
-func _on_Mode_value_changed(value: float) -> void:
-	mode = value
-
-
 func _on_TargetProjectOption_item_selected(index: int) -> void:
 	finalize_recording()
 	project = extension_api.get_global().projects[index]
@@ -99,6 +118,14 @@ func _on_TargetProjectOption_item_selected(index: int) -> void:
 
 func _on_TargetProjectOption_pressed() -> void:
 	refresh_projects_list()
+
+
+func _on_Mode_value_changed(value: float) -> void:
+	mode = value
+
+
+func _on_SpinBox_value_changed(value: float) -> void:
+	skip_amount = value
 
 
 func refresh_projects_list() -> void:
@@ -120,8 +147,8 @@ func _on_Choose_pressed() -> void:
 
 
 func _on_Path_dir_selected(dir: String) -> void:
-	save_dir = dir
-	path_field.text = save_dir
+	chosen_dir = dir
+	path_field.text = chosen_dir
 	start_button.disabled = false
 
 
@@ -171,5 +198,3 @@ func get_frame_image() -> Image:
 		layer_i += 1
 	current_frame.unlock()
 	return current_frame
-
-
