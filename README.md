@@ -44,6 +44,10 @@ The details for the extentions in the repo is as follows; <p>
   
   ![Spritesheet Preview](https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png)<p>
 
+**ThemePack:** New PixelSprite and Neon (silver, blue, pink) themes
+  
+  ![ThemePack](https://user-images.githubusercontent.com/77773850/183347028-96df2ad6-550d-4052-84d3-39f23829ce05.png)<p>
+
 **UVHelperPack:** Set of tools to help you create UVmap. Inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE
 
   ![Screenshot from 2022-07-05 20-39-44](https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png)<p>
