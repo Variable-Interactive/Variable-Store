@@ -18,4 +18,6 @@
 
 ["UVHelperPack", 0.2, "(Minimum version required: 0.10.2-dev) Lets you create UVmaps. Inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE. Tutorial for this extension: https://youtu.be/nS1zBddFcMI", "https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/UVHelperPack.pck"]
 
+["Voxelorama", 0.2, "A free and open source extension for Pixelorama that generates 3D voxel art out of 2D pixel art", "https://user-images.githubusercontent.com/35376950/185218214-c8356f86-00ed-4f39-b0f8-458a29d0061b.png", "https://github.com/Orama-Interactive/VoxeloramaExtension/releases/download/0.2/Voxelorama.pck"]
+
 #["zpix-font-ext", 0.1, "A new Font for pixelorama from (https://github.com/SolidZORO/zpix-pixel-font)", "https://user-images.githubusercontent.com/77773850/163723711-d7d8520e-56c7-4763-a9a6-1e9dcec5cde8.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/zpix-font-ext.pck"]
