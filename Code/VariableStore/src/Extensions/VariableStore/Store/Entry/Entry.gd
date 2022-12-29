@@ -102,8 +102,6 @@ func _on_DownloadRequest_request_completed(result: int, _response_code, _headers
 		extension_container.install_extension(download_path)
 		if is_update:
 			is_update = false
-			$Alert/Text.text = str("Update Complete!!\nRestart Pixelorama to take effect").c_unescape()
-			$Alert.popup_centered()
 		announce_done(true)
 	else:
 		$Alert/Text.text = str("Unable to Download extension...\nHttp Code (",result,")").c_unescape()
