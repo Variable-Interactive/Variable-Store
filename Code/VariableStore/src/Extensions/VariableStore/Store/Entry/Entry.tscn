@@ -67,6 +67,16 @@ margin_bottom = 60.0
 text = "Done!!!"
 align = 1
 
+[node name="ProgressBar" type="ProgressBar" parent="Panel/HBoxContainer/VBoxContainer"]
+visible = false
+margin_top = 80.0
+margin_right = 283.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="ProgressTimer" type="Timer" parent="Panel/HBoxContainer/VBoxContainer/ProgressBar"]
+wait_time = 0.1
+
 [node name="Download" type="Button" parent="Panel/HBoxContainer/VBoxContainer"]
 margin_top = 104.0
 margin_right = 283.0
@@ -98,6 +108,7 @@ margin_bottom = -36.0
 align = 1
 valign = 1
 
+[connection signal="timeout" from="Panel/HBoxContainer/VBoxContainer/ProgressBar/ProgressTimer" to="." method="_on_ProgressTimer_timeout"]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Download" to="." method="_on_Download_pressed"]
 [connection signal="timeout" from="RequestDelay" to="." method="_on_RequestDelay_timeout"]
 [connection signal="request_completed" from="ImageRequest" to="." method="_on_ImageRequest_request_completed"]

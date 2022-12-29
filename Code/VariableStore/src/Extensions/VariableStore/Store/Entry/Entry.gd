@@ -62,7 +62,7 @@ func set_if_updatable(name: String, new_version: float):
 			if typeof(old_version) == TYPE_REAL:
 				if new_version > old_version:
 					down_button.text = "Update"
-					is_update == true
+					is_update = true
 				elif new_version == old_version:
 					down_button.text = "Re-Download"
 
@@ -72,6 +72,28 @@ func _on_Download_pressed() -> void:
 	down_button.disabled = true
 	download_request.download_file = download_path
 	download_request.request(download_link)
+	prepare_progress()
+
+
+func prepare_progress():
+	$Panel/HBoxContainer/VBoxContainer/ProgressBar.visible = true
+	$Panel/HBoxContainer/VBoxContainer/ProgressBar.value = 0
+	$Panel/HBoxContainer/VBoxContainer/ProgressBar/ProgressTimer.start()
+
+
+func _on_ProgressTimer_timeout():
+	update_progress()
+
+
+func update_progress():
+	var down = download_request.get_downloaded_bytes()
+	var total = download_request.get_body_size()
+	$Panel/HBoxContainer/VBoxContainer/ProgressBar.value = (float(down) / float(total)) * 100.0
+
+
+func close_progress():
+	$Panel/HBoxContainer/VBoxContainer/ProgressBar.visible = false
+	$Panel/HBoxContainer/VBoxContainer/ProgressBar/ProgressTimer.stop()
 
 
 func _on_DownloadRequest_request_completed(result: int, _response_code, _headers, _body) -> void:
@@ -92,6 +114,7 @@ func _on_DownloadRequest_request_completed(result: int, _response_code, _headers
 
 
 func announce_done(success: bool):
+	close_progress()
 	down_button.disabled = false
 	down_button.text = "Re-Download"
 	if success:
