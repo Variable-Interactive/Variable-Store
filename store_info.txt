@@ -1,4 +1,4 @@
-0.3
+0.4
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", "Image", "Download Link"] format
 ["VariableStore", "A Store to download pixelorama extensions!! (Restart Pixelorama after update)", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
