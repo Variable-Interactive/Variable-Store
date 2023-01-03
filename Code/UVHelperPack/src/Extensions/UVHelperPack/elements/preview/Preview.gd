@@ -103,8 +103,8 @@ func _input(event: InputEvent) -> void:
 				mouse_default_cursor_shape = Control.CURSOR_ARROW
 
 			if (
-				!_global.left_cursor.visible
-				and !_global.right_cursor.visible
+				!_global.control.left_cursor.visible
+				and !_global.control.right_cursor.visible
 			):
 				_global.has_focus = false
 				_global.can_draw = false
@@ -225,11 +225,11 @@ func _on_Load_pressed() -> void:
 
 func _on_PreviewPanel_mouse_entered() -> void:
 	var global = main.global
-	global.left_cursor.visible = global.show_left_tool_icon
-	global.right_cursor.visible = global.show_right_tool_icon
+	global.control.left_cursor.visible = global.show_left_tool_icon
+	global.control.right_cursor.visible = global.show_right_tool_icon
 
 
 func _on_PreviewPanel_mouse_exited() -> void:
 	var global = main.global
-	global.left_cursor.visible = false
-	global.right_cursor.visible = false
+	global.control.left_cursor.visible = false
+	global.control.right_cursor.visible = false

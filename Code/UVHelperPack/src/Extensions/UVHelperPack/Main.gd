@@ -9,46 +9,45 @@ var menu_idx :int
 # This script acts as a setup for the extension
 func _enter_tree() -> void:
 	extension_api = get_node_or_null("/root/ExtensionsApi")
-	global = get_node_or_null("/root/Global")
 
 	if extension_api:
-		if global:
+		global = extension_api.get_global()
 
-			# Adding Tools
-			extension_api.add_tool(
-				"UVLineTool",
-				"UV Line Tool",
-				"",
-				preload("res://src/Extensions/UVHelperPack/elements/line/LineTool.tscn"),
-				"""Hold %s to snap the angle of the line
-		Hold %s to center the shape on the click origin
-		Hold %s to displace the shape's origin""",
-				["shape_perfect", "shape_center", "shape_displace"]
-			)
+		# Adding Tools
+		extension_api.add_tool(
+			"UVLineTool",
+			"UV Line Tool",
+			"",
+			preload("res://src/Extensions/UVHelperPack/elements/line/LineTool.tscn"),
+			"""Hold %s to snap the angle of the line
+	Hold %s to center the shape on the click origin
+	Hold %s to displace the shape's origin""",
+			["shape_perfect", "shape_center", "shape_displace"]
+		)
 
-			extension_api.add_tool(
-				"UVColorPicker",
-				"UV Color Picker",
-				"",
-				preload("res://src/Extensions/UVHelperPack/elements/colorpicker/ColorPicker.tscn"),
-				"Select a color from a pixel of the sprite"
-			)
+		extension_api.add_tool(
+			"UVColorPicker",
+			"UV Color Picker",
+			"",
+			preload("res://src/Extensions/UVHelperPack/elements/colorpicker/ColorPicker.tscn"),
+			"Select a color from a pixel of the sprite"
+		)
 
-			# Adding Apply map to uv Dialog
-			var parent = global.control.get_node("Dialogs")
-#
-			menu_idx = extension_api.add_menu_item(3, "Apply Map texture", {})
-			var m :PopupMenu
-			global.top_menu_container.image_menu_button.get_popup().connect("index_pressed", self, "image_menu_idx_pressed")
-			apply_dialog = preload("res://src/Extensions/UVHelperPack/elements/ApplyMapDialog/ApplyMap.tscn").instance()
-			parent.call_deferred("add_child", apply_dialog)
-			apply_dialog.main = self
+		# Adding Apply map to uv Dialog
+		var parent = global.control.get_node("Dialogs")
 
-			# Preview
-			preview_dialog = preload("res://src/Extensions/UVHelperPack/elements/preview/Preview.tscn").instance()
-			parent.call_deferred("add_child", preview_dialog)
-			preview_dialog.show()
-			preview_dialog.main = self
+		menu_idx = extension_api.add_menu_item(3, "Apply Map texture", {})
+		var m :PopupMenu
+		global.top_menu_container.image_menu_button.get_popup().connect("index_pressed", self, "image_menu_idx_pressed")
+		apply_dialog = preload("res://src/Extensions/UVHelperPack/elements/ApplyMapDialog/ApplyMap.tscn").instance()
+		parent.call_deferred("add_child", apply_dialog)
+		apply_dialog.main = self
+
+		# Preview
+		preview_dialog = preload("res://src/Extensions/UVHelperPack/elements/preview/Preview.tscn").instance()
+		parent.call_deferred("add_child", preview_dialog)
+		preview_dialog.show()
+		preview_dialog.main = self
 
 
 func image_menu_idx_pressed(idx :int):
