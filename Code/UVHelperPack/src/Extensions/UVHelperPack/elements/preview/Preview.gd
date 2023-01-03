@@ -103,14 +103,12 @@ func _input(event: InputEvent) -> void:
 				mouse_default_cursor_shape = Control.CURSOR_ARROW
 
 			if (
-				!_global.control.left_cursor.visible
-				and !_global.control.right_cursor.visible
+				(!_global.control.left_cursor.visible
+				or !_global.control.right_cursor.visible)
 			):
 				_global.has_focus = false
-				_global.can_draw = false
 			else:
 				_global.has_focus = true
-				_global.can_draw = true
 
 		elif event is InputEventMouseMotion and scaling:  # Here's where the scaling is done
 				# SIDES

@@ -33,11 +33,9 @@ func _enter_tree() -> void:
 			"Select a color from a pixel of the sprite"
 		)
 
-		# Adding Apply map to uv Dialog
 		var parent = global.control.get_node("Dialogs")
-
+		# Adding Apply map to uv Dialog
 		menu_idx = extension_api.add_menu_item(3, "Apply Map texture", {})
-		var m :PopupMenu
 		global.top_menu_container.image_menu_button.get_popup().connect("index_pressed", self, "image_menu_idx_pressed")
 		apply_dialog = preload("res://src/Extensions/UVHelperPack/elements/ApplyMapDialog/ApplyMap.tscn").instance()
 		parent.call_deferred("add_child", apply_dialog)

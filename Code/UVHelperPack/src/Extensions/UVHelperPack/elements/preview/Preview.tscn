@@ -81,6 +81,7 @@ margin_bottom = 19.0
 rect_min_size = Vector2( 50, 0 )
 hint_tooltip = "Hover this over the drawing to view it in Hue/Value Mode
 Colors near black are hard to differentiate so use this preview (you can scale this preview from corners)"
+mouse_filter = 1
 text = "Hue :"
 align = 2
 valign = 1
@@ -120,6 +121,7 @@ margin_bottom = 19.0
 rect_min_size = Vector2( 50, 0 )
 hint_tooltip = "Hover this over the drawing to view it in Hue/Value Mode
 Colors near black are hard to differentiate so use this preview (you can scale this preview from corners)"
+mouse_filter = 1
 text = "Value :"
 align = 2
 valign = 1
