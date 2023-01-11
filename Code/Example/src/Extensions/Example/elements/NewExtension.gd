@@ -8,11 +8,18 @@ var extension_json := {
 	"description": "What the Extension Does",
 	"author": "Your Name",
 	"version": "0.1",
+	"supported_api_versions": "2",
 	"license": "MIT",
 	"nodes": [
 		"Main.tscn"
 	]
 }
+
+
+func _ready():
+	var extension_api = get_node_or_null("/root/ExtensionApi")
+	if extension_api:
+		extension_json["supported_api_versions"] = str(extension_api.get_api_version())
 
 
 func _on_NewExtension_about_to_show() -> void:
@@ -103,9 +110,9 @@ func _on_NewExtension_confirmed() -> void:
 	file.open(main_script_path, File.WRITE)
 	file.store_string($Hidden/MainGd.text)
 	file.close()
-	file.open(api_documentation, File.WRITE)
-	file.store_string($Hidden/ApiDoc.text)
-	file.close()
+#	file.open(api_documentation, File.WRITE)
+#	file.store_string($Hidden/ApiDoc.text)
+#	file.close()
 	file.open(save_path.plus_file("project.godot"), File.WRITE)
 	file.store_string($Hidden/Project.text.replace("Example", extension_json.name))
 	file.close()
@@ -113,15 +120,15 @@ func _on_NewExtension_confirmed() -> void:
 	file.store_string($Hidden/ExportCfg.text)
 	file.close()
 
-	if include_custom_dialog:
-		dir.make_dir_recursive(str(extension_path, "/Dialog"))
-		var dialog_tscn = str(extension_path, "/Dialog/Dialog.tscn")
-		var dialog_gd = str(extension_path, "/Dialog/Dialog.gd")
-		file.open(dialog_tscn, File.WRITE)
-		file.store_string($Hidden/DialogTscn.text % extension_json.name)
-		file.close()
-		file.open(dialog_gd, File.WRITE)
-		file.store_string($Hidden/DialogGd.text)
-		file.close()
+#	if include_custom_dialog:
+#		dir.make_dir_recursive(str(extension_path, "/Dialog"))
+#		var dialog_tscn = str(extension_path, "/Dialog/Dialog.tscn")
+#		var dialog_gd = str(extension_path, "/Dialog/Dialog.gd")
+#		file.open(dialog_tscn, File.WRITE)
+#		file.store_string($Hidden/DialogTscn.text % extension_json.name)
+#		file.close()
+#		file.open(dialog_gd, File.WRITE)
+#		file.store_string($Hidden/DialogGd.text)
+#		file.close()
 
 
