@@ -5,8 +5,8 @@
     </a>
 </p>
 
-## Use the [VariableStore](https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck) extensions to download these extensions from within Pixelorama!!!
-### The extensions "don't" have to be in this specific repo for them to appear in the "VariableStore" so if you want an extension added, let me know in **issues**.
+## Use the [VariableStore](https://variable-interactive.itch.io/pixelorama-extensions) extension to download these extensions from within Pixelorama!!!
+
 This contains some of the [Pixelorama](https://orama-interactive.itch.io/pixelorama) extensions i made along with their code <p>
 The codes for each extension is stored in a folder of the same name inside the **Code** folder
 
