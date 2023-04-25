@@ -1,6 +1,6 @@
 0.5
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", "Image", "Download Link"] format
-["VariableStore", 0.4, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
+["VariableStore", 0.5, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
 ["Example", 0.5, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 
