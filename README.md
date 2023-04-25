@@ -1,6 +1,6 @@
 <p align="center">
-    <a href="https://github.com/Variable-ind/Pixelorama-Extensions/releases">
-        <img src="https://img.shields.io/github/downloads/Variable-ind/Pixelorama-Extensions/total?color=lightgreen" alt="Downloads" />
+    <a href="https://github.com/Variable-Interactive/Variable-Store/releases">
+        <img src="https://img.shields.io/github/downloads/Variable-Interactive/Variable-Store/total?color=lightgreen" alt="Downloads" />
     </a>
 </p>
 
