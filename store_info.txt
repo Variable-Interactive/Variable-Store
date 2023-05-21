@@ -4,13 +4,7 @@
 
 ["Example", 0.71, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 
-["AverageColor", 0.1, "Sometimes you need to find average of 2 colors.. this extension does it for you!!", "https://user-images.githubusercontent.com/77773850/163723698-6879ff60-631e-4c4a-bbc1-1e3a8d36a3a0.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/AverageColor.pck"]
-
-["KeyDisplay", 0.2, "Handy extension to display shortcuts for use in videos", "https://user-images.githubusercontent.com/77773850/163723707-698a74a1-b8d5-401c-bb70-74dc8b6f2e98.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
-
-["PerspectiveEditor", 0.4, "This extension will let you create Perspective lines Quickly and Easily!!!", "https://user-images.githubusercontent.com/77773850/178000309-33b7b857-2c2e-4c21-bfbd-527e143c3b79.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/PerspectiveEditor.pck"]
-
-["Recorder", 0.2, "This extension will let you save a snapshot at every undo/redo event to be combined later as a video in a video editor", "https://user-images.githubusercontent.com/77773850/181867485-11f85783-cd08-446b-a960-e078053d7fc0.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Recorder.pck"]
+["KeyDisplay", 0.201, "Handy extension to display shortcuts for use in videos", "https://user-images.githubusercontent.com/77773850/163723707-698a74a1-b8d5-401c-bb70-74dc8b6f2e98.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
 
 ["SpritesheetPreview", 0.2, "Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places", "https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/SpritesheetPreview.pck"]
 
