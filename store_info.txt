@@ -2,7 +2,7 @@
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", "Image", "Download Link"] format
 ["VariableStore", 0.5, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
-["Example", 0.72, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
+["Example", 0.73, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 
 ["AverageColor", 0.1, "Sometimes you need to find average of 2 colors.. this extension does it for you!!", "https://user-images.githubusercontent.com/77773850/163723698-6879ff60-631e-4c4a-bbc1-1e3a8d36a3a0.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/AverageColor.pck"]
 
