@@ -4,7 +4,9 @@
 
 ["Example", 0.74, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 
-["KeyDisplay", 0.201, "Handy extension to display shortcuts for use in videos", "https://user-images.githubusercontent.com/77773850/163723707-698a74a1-b8d5-401c-bb70-74dc8b6f2e98.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
+["Godout", 0.1, "Extension that uses rust language and the power of rust to give you an exponentially Fast GIF Exporter and a new WEBP Exporter.", "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/13a929d6-98bf-490e-8a7c-a542effb0b3e", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Godout.pck"]
+
+["KeyDisplay", 0.201, "Handy extension to display shortcuts for use in videos", "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/dcedd193-1c37-4311-8dc2-ee0b65de8cec", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
 
 ["SpritesheetPreview", 0.2, "Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places", "https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/SpritesheetPreview.pck"]
 
