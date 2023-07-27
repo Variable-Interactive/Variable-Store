@@ -2,7 +2,7 @@
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", "Image", "Download Link"] format
 ["VariableStore", 0.5, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
-["Example", 0.74, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
+["Example", 0.8, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 
 ["Godout", 0.1, "Extension that uses rust language and the power of rust to give you an exponentially Fast GIF Exporter and a new WEBP Exporter.", "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/13a929d6-98bf-490e-8a7c-a542effb0b3e", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Godout.pck"]
 
