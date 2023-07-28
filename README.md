@@ -18,6 +18,7 @@ This is where the Variable Store Extension Fetches data from
    - `Image link` is the link you get by right clicking an image (uploaded somewhere on the internet) and selecting **Copy Image Link**
    - `"{repo}/raw/{Path of extension within repo}"` (if `https://github.com/Variable-ind/Pixelorama-Extensions/`blob`/master/Extensions/Example.pck` is the URL path to your extension then replace **blob** with **raw**
    - and the link becomes "`"https://github.com/Variable-ind/Pixelorama-Extensions/`raw`/master/Extensions/Example.pck"`"
-4. One store entry must occupy only one line (and vice-versa)
-3. Comments are supported. you can comment an entire line by placing `#` at the start of the line (comments between or at end of line are not allowed).
+3. One store entry must occupy only one line (and vice-versa)
+4. Comments are supported. you can comment an entire line by placing `#` at the start of the line (comments between or at end of line are not allowed).
+5. links to another store_info file can be placed inside another store_info file (it will get detected as a custom store file)
 
