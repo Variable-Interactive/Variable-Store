@@ -4,9 +4,11 @@
 
 ["Example", 0.74, "A Tutorial Extension (Also used to create extensions)", "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 
-["Godout", 0.1, "Extension that uses rust language and the power of rust to give you an exponentially Fast GIF Exporter and a new WEBP Exporter.", "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/13a929d6-98bf-490e-8a7c-a542effb0b3e", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Godout.pck"]
+["Godout", 0.1, "Extension that uses the power of rust to give you an exponentially Fast GIF Exporter and a new WEBP Exporter.", "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/13a929d6-98bf-490e-8a7c-a542effb0b3e", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Godout.pck"]
 
 ["KeyDisplay", 0.201, "Handy extension to display shortcuts for use in videos", "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/dcedd193-1c37-4311-8dc2-ee0b65de8cec", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
+
+["LineArt", 0.1, "Adds a lineart shader from https://godotshaders.com/shader/line-art", "https://user-images.githubusercontent.com/77773850/256789294-d725a4b7-627b-4a1d-8553-f743070893ef.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/LineArt.pck"]
 
 ["Swappy", 0.1, "Helper Extension for Re-Coloring. Replaces all instances of a Color with a New Color.", "https://user-images.githubusercontent.com/77773850/246190032-e4d1e2b9-03d8-4a6d-9834-e29ca7fbf463.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Swappy.pck"]
 
