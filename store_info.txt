@@ -1,18 +1,21 @@
 0.6
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", .... ,"Image", "Download Link"] format
+# Tags used so far are { UI, Tutorial, Exporter, Image Effect, Theme, Tool
 ["VariableStore", 0.6, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
 ["Example", 0.74, "A Tutorial Extension (Also used to create extensions)", ["Tags", "Tutorial"], "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
 
+["CameraZoomer", 0.1, "Lets you set precise zoom values to Canvas Preview", ["Tags", "UI"], "https://user-images.githubusercontent.com/77773850/259645721-2f110f31-a8d7-459d-82c4-d745141c6da9.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/CameraZoomer.pck"]
+
 ["Godout", 0.1, "Extension that uses the power of rust to give you an exponentially Fast GIF Exporter and a new WEBP Exporter.", ["Tags", "Exporter"], "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/13a929d6-98bf-490e-8a7c-a542effb0b3e", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Godout.pck"]
 
-["KeyDisplay", 0.201, "Handy extension to display shortcuts for use in videos", "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/dcedd193-1c37-4311-8dc2-ee0b65de8cec", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
+["KeyDisplay", 0.201, "Handy extension to display shortcuts for use in videos", ["Tags", "UI"], "https://github.com/Variable-ind/Pixelorama-Extensions/assets/77773850/dcedd193-1c37-4311-8dc2-ee0b65de8cec", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/KeyDisplay.pck"]
 
 # ["LineArt", 0.1, "Adds a lineart shader from https://godotshaders.com/shader/line-art", ["Tags", "Image Effect"], "https://user-images.githubusercontent.com/77773850/256789294-d725a4b7-627b-4a1d-8553-f743070893ef.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/LineArt.pck"]
 
-["Percy", 0.1, "Separates Layers from Frames", ["Tags", "UI"], "https://user-images.githubusercontent.com/141819348/259411017-d6e948d5-3d19-4a41-a765-c5d21a152fc7.png", "https://github.com/TheLsbt/Percy/releases/download/0.1/Percy.pck"]
+["Percy", 0.1, "Separates Animation Timeline Layers related UI from Frames related UI", ["Tags", "UI"], "https://user-images.githubusercontent.com/141819348/259411017-d6e948d5-3d19-4a41-a765-c5d21a152fc7.png", "https://github.com/TheLsbt/Percy/releases/download/0.1/Percy.pck"]
 
-["Swappy", 0.1, "Helper Extension for Re-Coloring. Replaces all instances of a Color with a New Color.", "https://user-images.githubusercontent.com/77773850/246190032-e4d1e2b9-03d8-4a6d-9834-e29ca7fbf463.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Swappy.pck"]
+["Swappy", 0.1, "Helper Extension for Re-Coloring. Replaces all instances of a Color with a New Color.", ["Tags", "Tool", "UI"], "https://user-images.githubusercontent.com/77773850/246190032-e4d1e2b9-03d8-4a6d-9834-e29ca7fbf463.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Swappy.pck"]
 
 ["SpritesheetPreview", 0.2, "Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places", "https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/SpritesheetPreview.pck"]
 
