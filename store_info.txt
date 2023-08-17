@@ -1,9 +1,11 @@
 0.6
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", .... ,"Image", "Download Link"] format
-# Tags used so far are { UI, Tutorial, Exporter, Image Effect, Theme, Tool }
+# Tags used so far are { UI, Tutorial, Exporter, Image Effect, Theme, Tool, Audio }
 ["VariableStore", 0.6, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
 ["Example", 0.8, "A Tutorial Extension (Also used to create extensions)", ["Tags", "Tutorial"], "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
+
+["Audia", 0.1, "Allows to play a specific audio on a specific tag. How to use: Change the driver from (Dummy) to something other driver. Drag and drop the audio to place it in (Music Library). Write any tag's name in (Play on Tag) field. You will hear sound whenever that tag is played", ["Tags", "UI", "Exporter", "Audio"], "https://user-images.githubusercontent.com/77773850/261408793-3f80c3be-4dd8-41cd-ad99-f04291064333.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Audia.pck"]
 
 ["CameraZoomer", 0.1, "Lets you set precise zoom values to Canvas Preview", ["Tags", "UI"], "https://user-images.githubusercontent.com/77773850/259645721-2f110f31-a8d7-459d-82c4-d745141c6da9.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/CameraZoomer.pck"]
 
