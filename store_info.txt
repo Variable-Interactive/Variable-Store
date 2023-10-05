@@ -1,6 +1,6 @@
 0.6
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", .... ,"Image", "Download Link"] format
-# Tags used so far are { UI, Tutorial, Exporter, Image Effect, Theme, Tool, Audio }
+# Tags used so far are { UI, Tutorial, Exporter, Image Effect, Theme, Tool, Audio, Analytics }
 ["VariableStore", 0.6, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
 ["Example", 0.8, "A Tutorial Extension (Also used to create extensions)", ["Tags", "Tutorial"], "https://user-images.githubusercontent.com/77773850/164516526-227551c5-ca39-4491-b03a-76353f4879a5.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Example.pck"]
@@ -22,6 +22,8 @@
 ["SpritesheetPreview", 0.2, "Lets you preview your frames as a spritesheet. Now you can immediately move them to the right places", "https://user-images.githubusercontent.com/77773850/164038514-6d741e4a-0ade-4823-8948-ef6917c70a38.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/SpritesheetPreview.pck"]
 
 ["ThemePack", 0.11, "New PixelSprite and Neon (silver, blue, pink) themes", ["Tags", "Theme"], "https://user-images.githubusercontent.com/77773850/183347028-96df2ad6-550d-4052-84d3-39f23829ce05.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/ThemePack.pck"]
+
+["TimeTracking", 0.1, "Saves project statistics in the .pxo file (access with Help>Project Statistics)", ["Tags", "Analytics"], "https://user-images.githubusercontent.com/77773850/272894172-5c2aec0e-944e-4e91-90ee-8fe1803cf83d.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/TimeTracking.pck"]
 
 ["UVHelperPack", 0.32, "Lets you create UVmaps. Inspired from https://www.youtube.com/watch?v=HsOKwUwL1bE. Tutorial for this extension: https://youtu.be/nS1zBddFcMI", ["Tags", "Tool"], "https://user-images.githubusercontent.com/77773850/177538973-995f7f5a-92df-4799-b7c5-6d688bf282b6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/UVHelperPack.pck"]
 
