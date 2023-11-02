@@ -31,3 +31,4 @@
 
 ["Voxelorama", 0.3, "A free and open source extension for Pixelorama that generates 3D voxel art out of 2D pixel art", ["Tags", "Tool"], "https://user-images.githubusercontent.com/35376950/185218214-c8356f86-00ed-4f39-b0f8-458a29d0061b.png", "https://github.com/Orama-Interactive/VoxeloramaExtension/releases/download/0.3/Voxelorama.pck"]
 
+["Voxelorama", 0.3, "(Forked version of original Voxelorama) adds some new features", ["Tags", "Tool"], "https://user-images.githubusercontent.com/77773850/280085769-d981b096-2e75-4345-a0fd-87be05793145.png", "https://github.com/Variable-ind/VoxeloramaExtension/releases/download/3.0/Voxelorama.pck"]
