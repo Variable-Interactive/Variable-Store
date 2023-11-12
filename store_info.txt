@@ -21,7 +21,7 @@
 
 ["Percy", 0.1, "Separates Animation Timeline Layers related UI from Frames related UI", ["Tags", "UI"], "https://user-images.githubusercontent.com/141819348/259411017-d6e948d5-3d19-4a41-a765-c5d21a152fc7.png", "https://github.com/TheLsbt/Percy/releases/download/0.1/Percy.pck"]
 
-["PixelCageTransform", 0.2, "An extension that adds a functional (albeit unrefined) bezier curve cage transform tool for Pixelorama. This is a fork of the original (https://github.com/hlin91/PixeloramaCageTransform)", ["Tags", "Tool"], "https://raw.githubusercontent.com/hlin91/PixeloramaCageTransform/master/.github/images/example.png", "https://github.com/Variable-ind/PixeloramaCageTransform/releases/download/v0.2/PixelCageTransform.pck"]
+# ["PixelCageTransform", 0.2, "An extension that adds a functional (albeit unrefined) bezier curve cage transform tool for Pixelorama. This is a fork of the original (https://github.com/hlin91/PixeloramaCageTransform)", ["Tags", "Tool"], "https://raw.githubusercontent.com/hlin91/PixeloramaCageTransform/master/.github/images/example.png", "https://github.com/Variable-ind/PixeloramaCageTransform/releases/download/v0.2/PixelCageTransform.pck"]
 
 ["Swappy", 0.1, "Helper Extension for Re-Coloring. Replaces all instances of a Color with a New Color.", ["Tags", "Tool", "UI"], "https://user-images.githubusercontent.com/77773850/246190032-e4d1e2b9-03d8-4a6d-9834-e29ca7fbf463.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Swappy.pck"]
 
