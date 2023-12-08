@@ -1,7 +1,7 @@
-0.6
+0.61
 # The Number above shows the Version of the store, the info about extensions is stored in ["Name", "Version", "Information", .... ,"Image", "Download Link"] format
 # Tags used so far are { UI, Tutorial, Exporter, Image Effect, Theme, Tool, Audio, Analytics }
-["VariableStore", 0.6, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
+["VariableStore", 0.61, "A Store to download pixelorama extensions!!", "https://user-images.githubusercontent.com/77773850/164515247-1e11123d-c071-42d4-9b4e-275de492dce6.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/VariableStore.pck"]
 
 ["ExtensionCreator", 0.81, "Used as a guide by beginers for creating extensions", ["Tags", "Tutorial"], "https://user-images.githubusercontent.com/77773850/283574411-952f6032-dadb-4bab-998c-f90c236f7fe8.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/ExtensionCreator.pck"]
 
