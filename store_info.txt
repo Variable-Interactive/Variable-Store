@@ -5,7 +5,7 @@
 
 ["ExtensionCreator", 0.81, "Used as a guide by beginers for creating extensions", ["Tags", "Tutorial"], "https://user-images.githubusercontent.com/77773850/283574411-952f6032-dadb-4bab-998c-f90c236f7fe8.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/ExtensionCreator.pck"]
 
-["Audia", 0.1, "Allows to play a specific audio on a specific tag. How to use: Change the driver from (Dummy) to something other driver. Drag and drop the audio to place it in (Music Library). Write any tag's name in (Play on Tag) field. You will hear sound whenever that tag is played", ["Tags", "UI", "Exporter", "Audio"], "https://user-images.githubusercontent.com/77773850/261408793-3f80c3be-4dd8-41cd-ad99-f04291064333.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Audia.pck"]
+["Audia", 0.11, "Allows to play a specific audio on a specific tag. How to use: Change the driver from (Dummy) to something other driver. Drag and drop the audio to place it in (Music Library). Write any tag's name in (Play on Tag) field. You will hear sound whenever that tag is played", ["Tags", "UI", "Exporter", "Audio"], "https://user-images.githubusercontent.com/77773850/261408793-3f80c3be-4dd8-41cd-ad99-f04291064333.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/Audia.pck"]
 
 ["CameraZoomer", 0.1, "Lets you set precise zoom values to Canvas Preview", ["Tags", "UI"], "https://user-images.githubusercontent.com/77773850/259645721-2f110f31-a8d7-459d-82c4-d745141c6da9.png", "https://github.com/Variable-ind/Pixelorama-Extensions/raw/master/Extensions/CameraZoomer.pck"]
 
